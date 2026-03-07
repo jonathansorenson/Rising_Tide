@@ -11,6 +11,7 @@ const navLinks = [
   { href: "/market", label: "Market" },
   { href: "/track-record", label: "Track Record" },
   { href: "/about", label: "About" },
+  { href: "/blog", label: "Blog" },
 ];
 
 export default function Navbar() {

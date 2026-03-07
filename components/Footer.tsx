@@ -7,6 +7,7 @@ const footerLinks = [
   { href: "/track-record", label: "Track Record" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
+  { href: "/blog", label: "Blog" },
 ];
 
 export default function Footer() {
