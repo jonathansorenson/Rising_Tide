@@ -8,45 +8,69 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
-      lastModified: new Date(),
+      lastModified: "2026-03-08",
       changeFrequency: "monthly",
       priority: 1.0,
     },
     {
       url: `${baseUrl}/about`,
-      lastModified: new Date(),
+      lastModified: "2026-03-08",
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/approach`,
-      lastModified: new Date(),
+      lastModified: "2026-03-08",
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
       url: `${baseUrl}/market`,
-      lastModified: new Date(),
+      lastModified: "2026-03-08",
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
       url: `${baseUrl}/track-record`,
-      lastModified: new Date(),
+      lastModified: "2026-03-08",
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified: new Date(),
+      lastModified: "2026-03-08",
       changeFrequency: "yearly",
       priority: 0.6,
     },
     {
       url: `${baseUrl}/blog`,
-      lastModified: new Date(),
+      lastModified: "2026-03-08",
       changeFrequency: "weekly",
       priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/resources`,
+      lastModified: "2026-03-08",
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/resources/market-report`,
+      lastModified: "2026-03-08",
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/resources/deal-criteria`,
+      lastModified: "2026-03-08",
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/resources/broker-program`,
+      lastModified: "2026-03-08",
+      changeFrequency: "monthly",
+      priority: 0.7,
     },
   ];
 
@@ -54,7 +78,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts();
   const blogPages: MetadataRoute.Sitemap = posts.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: new Date(post.date),
+    lastModified: new Date(post.date).toISOString().split("T")[0],
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }));

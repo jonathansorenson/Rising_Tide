@@ -7,6 +7,14 @@ export const metadata: Metadata = {
   title: "Resources",
   description:
     "Free market reports, deal criteria, and broker partnership resources for CRE professionals on Florida's Space Coast.",
+  keywords: [
+    "CRE market report Florida",
+    "Space Coast real estate data",
+    "broker partnership program",
+    "commercial real estate resources",
+    "deal criteria CRE",
+    "free real estate market report",
+  ],
 };
 
 const resources = [

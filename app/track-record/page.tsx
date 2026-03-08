@@ -7,6 +7,14 @@ export const metadata: Metadata = {
   title: "Track Record",
   description:
     "Over $90M in transaction value across industrial, office, and multifamily asset classes. View our track record.",
+  keywords: [
+    "commercial real estate track record",
+    "CRE transaction history",
+    "industrial real estate portfolio",
+    "value-add real estate deals",
+    "Florida commercial property",
+    "real estate investment returns",
+  ],
 };
 
 const projects = [

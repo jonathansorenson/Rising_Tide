@@ -8,6 +8,15 @@ export const metadata: Metadata = {
   title: "Why the Space Coast",
   description:
     "Brevard County, Florida is one of the fastest-growing metros in America. Learn why Florida's Space Coast is a compelling market for commercial real estate.",
+  keywords: [
+    "Space Coast commercial real estate",
+    "Brevard County CRE",
+    "Florida industrial real estate",
+    "SpaceX real estate impact",
+    "aerospace defense real estate",
+    "Melbourne Florida investment",
+    "Space Coast economy growth",
+  ],
 };
 
 const marketStats = [
@@ -29,9 +38,44 @@ const employers = [
   "Raytheon",
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Why is Florida's Space Coast a good market for commercial real estate?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The Space Coast (Brevard County) is one of America's fastest-growing metros, driven by aerospace and defense employers like SpaceX, Blue Origin, and L3Harris. Industrial vacancy is below 4%, population growth outpaces the national average, and the Milken Institute ranks it among the top metros for job growth.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What companies are driving demand in Brevard County?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Major employers include SpaceX, Blue Origin, L3Harris, Lockheed Martin, Northrop Grumman, Boeing, and Raytheon. Patrick Space Force Base, Kennedy Space Center, and Cape Canaveral Space Force Station anchor the defense and aerospace ecosystem.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is the industrial vacancy rate on the Space Coast?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The industrial vacancy rate on Florida's Space Coast is currently sub-4%, reflecting strong demand from aerospace, defense, and high-tech manufacturing tenants.",
+      },
+    },
+  ],
+};
+
 export default function MarketPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Hero
         title="Why Florida's Space Coast"
         subtitle="One of America's fastest-growing metros — fueled by aerospace, defense, and high-tech manufacturing."

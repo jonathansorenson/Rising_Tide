@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import Hero from "@/components/Hero";
 import FadeIn from "@/components/FadeIn";
 import SectionDivider from "@/components/SectionDivider";
@@ -7,6 +8,14 @@ export const metadata: Metadata = {
   title: "About Us",
   description:
     "Meet the team behind Rising Tide Property Group. Over 15 years of hands-on commercial real estate experience.",
+  keywords: [
+    "Rising Tide Property Group",
+    "Nicholas White",
+    "commercial real estate team",
+    "CRE investment firm Florida",
+    "Space Coast real estate investor",
+    "hands-on property management",
+  ],
 };
 
 const values = [
@@ -84,30 +93,18 @@ export default function AboutPage() {
               </FadeIn>
             </div>
 
-            {/* Photo placeholder */}
+            {/* Founder Photo */}
             <div className="md:col-span-2">
               <FadeIn delay={0.15}>
                 <div className="relative">
-                  <div className="bg-sage/30 rounded-lg aspect-[3/4] flex items-center justify-center">
-                    <div className="text-center">
-                      <svg
-                        className="w-16 h-16 text-slate-dark/20 mx-auto"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={1}
-                          d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                        />
-                      </svg>
-                      <p className="mt-2 text-xs text-slate-dark/30">
-                        Photo Placeholder
-                      </p>
-                    </div>
-                  </div>
+                  <Image
+                    src="/images/nicholas-white.jpg"
+                    alt="Nicholas White, Founder & Principal of Rising Tide Property Group"
+                    width={800}
+                    height={800}
+                    className="rounded-lg object-cover aspect-[3/4] object-top"
+                    priority
+                  />
                   {/* Decorative offset block */}
                   <div className="absolute -bottom-3 -right-3 w-full h-full bg-warm-gold/10 rounded-lg -z-10" />
                 </div>

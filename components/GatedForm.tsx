@@ -36,6 +36,13 @@ export default function GatedForm({
     setError("");
 
     const formData = new FormData(e.currentTarget);
+
+    // Honeypot check — bots fill hidden fields
+    if (formData.get("website")) {
+      setStatus("success");
+      return;
+    }
+
     const name = formData.get("name") as string;
     const email = formData.get("email") as string;
 
@@ -49,6 +56,9 @@ export default function GatedForm({
           phone: formData.get("phone") || null,
           contact_type: formData.get("role") || formData.get("contact_type") || null,
           message: `Gated content request: ${leadSource}. Company: ${formData.get("company") || "N/A"}`,
+          utm: Object.fromEntries(
+            new URLSearchParams(window.location.search)
+          ),
         }),
       });
 
@@ -60,12 +70,22 @@ export default function GatedForm({
 
       setStatus("success");
 
-      // If there's a PDF, trigger download
+      // If there's a PDF, trigger download and fire GA4 event
       if (pdfUrl) {
         const link = document.createElement("a");
         link.href = pdfUrl;
         link.download = "";
         link.click();
+
+        // Track download in GA4
+        if (typeof window !== "undefined" && typeof window.gtag === "function") {
+          window.gtag("event", "file_download", {
+            file_name: pdfUrl.split("/").pop(),
+            file_extension: "pdf",
+            link_url: pdfUrl,
+            lead_source: leadSource,
+          });
+        }
       }
     } catch {
       setError("Something went wrong. Please try again.");
@@ -111,9 +131,10 @@ export default function GatedForm({
               id={field.name}
               name={field.name}
               required={field.required}
+              defaultValue=""
               className="w-full px-4 py-2.5 border border-text-dark/20 rounded focus:outline-none focus:ring-2 focus:ring-warm-gold/50 focus:border-warm-gold text-sm bg-cream/50"
             >
-              <option value="">Select one</option>
+              <option value="" disabled>Select one</option>
               {field.options?.map((opt) => (
                 <option key={opt.value} value={opt.value}>
                   {opt.label}
@@ -132,6 +153,11 @@ export default function GatedForm({
           )}
         </div>
       ))}
+
+      {/* Honeypot - hidden from real users */}
+      <div className="absolute opacity-0 -z-10" aria-hidden="true">
+        <input type="text" name="website" tabIndex={-1} autoComplete="off" />
+      </div>
 
       {error && <p className="text-red-600 text-sm">{error}</p>}
 

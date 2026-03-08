@@ -14,7 +14,13 @@ export default function BlogCTA() {
       const res = await fetch("/api/newsletter", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, source: "blog_cta" }),
+        body: JSON.stringify({
+          email,
+          source: "blog_cta",
+          utm: Object.fromEntries(
+            new URLSearchParams(window.location.search)
+          ),
+        }),
       });
 
       if (res.ok) {

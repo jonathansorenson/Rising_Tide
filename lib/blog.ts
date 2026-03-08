@@ -11,6 +11,12 @@ export interface BlogPost {
   tags: string[];
   keywords?: string[];
   content: string;
+  readingTime: number;
+}
+
+function estimateReadingTime(content: string): number {
+  const words = content.trim().split(/\s+/).length;
+  return Math.max(1, Math.ceil(words / 230));
 }
 
 const contentDir = path.join(process.cwd(), "content/blog");
@@ -21,7 +27,7 @@ export function getAllPosts(): Omit<BlogPost, "content">[] {
   const posts = files.map((filename) => {
     const slug = filename.replace(/\.mdx$/, "");
     const raw = fs.readFileSync(path.join(contentDir, filename), "utf-8");
-    const { data } = matter(raw);
+    const { data, content } = matter(raw);
 
     return {
       slug,
@@ -31,6 +37,7 @@ export function getAllPosts(): Omit<BlogPost, "content">[] {
       author: data.author ?? "Rising Tide Property Group",
       tags: data.tags ?? [],
       keywords: data.keywords ?? undefined,
+      readingTime: estimateReadingTime(content),
     };
   });
 
@@ -55,5 +62,6 @@ export function getPostBySlug(slug: string): BlogPost | null {
     tags: data.tags ?? [],
     keywords: data.keywords ?? undefined,
     content,
+    readingTime: estimateReadingTime(content),
   };
 }

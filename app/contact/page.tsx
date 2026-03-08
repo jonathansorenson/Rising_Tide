@@ -7,6 +7,13 @@ export const metadata: Metadata = {
   title: "Contact",
   description:
     "Get in touch with Rising Tide Property Group. Whether you're a prospective investor, broker, or partner, we'd welcome the conversation.",
+  keywords: [
+    "contact Rising Tide Property Group",
+    "CRE investment inquiry",
+    "broker partnership Florida",
+    "commercial real estate contact",
+    "Space Coast real estate firm",
+  ],
 };
 
 export default function ContactPage() {

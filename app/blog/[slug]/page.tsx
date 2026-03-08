@@ -5,6 +5,9 @@ import { getAllPosts, getPostBySlug } from "@/lib/blog";
 import FadeIn from "@/components/FadeIn";
 import MdxContent from "@/components/MdxContent";
 import BlogCTA from "@/components/BlogCTA";
+import ShareButtons from "@/components/ShareButtons";
+import RelatedPosts from "@/components/RelatedPosts";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 interface Props {
   params: { slug: string };
@@ -34,11 +37,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       publishedTime: post.date,
       authors: [post.author],
       tags: post.tags,
+      images: [
+        {
+          url: "https://risingtidepg.com/images/nicholas-white.jpg",
+          width: 800,
+          height: 800,
+          alt: post.title,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
       description: post.excerpt,
+      images: ["https://risingtidepg.com/images/nicholas-white.jpg"],
     },
     alternates: {
       canonical: url,
@@ -49,6 +61,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function BlogPostPage({ params }: Props) {
   const post = getPostBySlug(params.slug);
   if (!post) notFound();
+
+  const postUrl = `https://risingtidepg.com/blog/${params.slug}`;
 
   // BlogPosting JSON-LD schema
   const blogPostingSchema = {
@@ -61,6 +75,7 @@ export default async function BlogPostPage({ params }: Props) {
     author: {
       "@type": "Person",
       name: post.author,
+      url: "https://risingtidepg.com/about",
     },
     publisher: {
       "@type": "Organization",
@@ -69,9 +84,10 @@ export default async function BlogPostPage({ params }: Props) {
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://risingtidepg.com/blog/${params.slug}`,
+      "@id": postUrl,
     },
     keywords: (post.keywords ?? post.tags).join(", "),
+    wordCount: post.content.trim().split(/\s+/).length,
   };
 
   return (
@@ -93,7 +109,17 @@ export default async function BlogPostPage({ params }: Props) {
               "linear-gradient(135deg, #A8C5B8 0%, transparent 60%)",
           }}
         />
-        <div className="max-w-6xl mx-auto px-6 py-24 md:py-32 relative z-10">
+
+        {/* Breadcrumbs */}
+        <Breadcrumbs
+          items={[
+            { label: "Home", href: "/" },
+            { label: "Blog", href: "/blog" },
+            { label: post.title },
+          ]}
+        />
+
+        <div className="max-w-6xl mx-auto px-6 pb-24 md:pb-32 pt-8 relative z-10">
           <FadeIn>
             <Link
               href="/blog"
@@ -129,6 +155,8 @@ export default async function BlogPostPage({ params }: Props) {
                   day: "numeric",
                 })}
               </time>
+              <span>&middot;</span>
+              <span>{post.readingTime} min read</span>
             </div>
             {post.tags.length > 0 && (
               <div className="mt-4 flex flex-wrap gap-2">
@@ -154,7 +182,15 @@ export default async function BlogPostPage({ params }: Props) {
               <MdxContent source={post.content} />
             </article>
           </FadeIn>
+
+          {/* Social Sharing */}
+          <ShareButtons url={postUrl} title={post.title} />
+
+          {/* Newsletter CTA */}
           <BlogCTA />
+
+          {/* Related Posts */}
+          <RelatedPosts currentSlug={params.slug} currentTags={post.tags} />
         </div>
       </section>
     </>

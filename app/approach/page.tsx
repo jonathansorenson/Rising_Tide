@@ -9,6 +9,15 @@ export const metadata: Metadata = {
   title: "Our Approach",
   description:
     "Defensive yield with growth upside. Learn how Rising Tide Property Group underwrites, acquires, and operates commercial real estate.",
+  keywords: [
+    "CRE investment strategy",
+    "commercial real estate underwriting",
+    "NNN lease investment",
+    "value-add real estate",
+    "industrial real estate acquisition",
+    "defensive yield investing",
+    "cap rate 8 percent",
+  ],
 };
 
 const criteria = [
@@ -61,9 +70,44 @@ const steps = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is Rising Tide's investment strategy?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Rising Tide targets defensive yield with growth upside — typically 8%+ cap rate assets with NNN lease structures that protect against operating expense risk, combined with near-term lease rollovers that capture rent growth at fair market value.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What asset classes does Rising Tide invest in?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Rising Tide focuses on industrial, medical, and other low-vacancy asset classes with strong market tailwinds. We target newer construction or value-add repositioning opportunities with clear paths to value creation.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is the investment process at Rising Tide Property Group?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Our five-step process includes: (1) Source — proprietary deal sourcing and broker relationships, (2) Underwrite — conservative financial modeling with sensitivity analysis, (3) Acquire — institutional-grade due diligence, (4) Operate — hands-on asset management to drive NOI, and (5) Realize — strategic dispositions timed to market conditions.",
+      },
+    },
+  ],
+};
+
 export default function ApproachPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Hero
         title="Our Approach"
         subtitle="Disciplined investing rooted in real operations experience — from the ground up."

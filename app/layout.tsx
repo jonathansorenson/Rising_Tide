@@ -19,6 +19,15 @@ export const metadata: Metadata = {
   },
   description:
     "Rising Tide Property Group acquires and operates commercial real estate across Florida's Space Coast and select U.S. markets — delivering institutional-quality returns with a hands-on, partner-first approach.",
+  keywords: [
+    "Rising Tide Property Group",
+    "commercial real estate",
+    "Space Coast CRE",
+    "Florida real estate investment",
+    "industrial real estate",
+    "NNN lease",
+    "value-add CRE",
+  ],
   openGraph: {
     title: "Rising Tide Property Group",
     description:
@@ -27,16 +36,52 @@ export const metadata: Metadata = {
     locale: "en_US",
     siteName: "Rising Tide Property Group",
     url: "https://risingtidepg.com",
+    images: [
+      {
+        url: "https://risingtidepg.com/images/nicholas-white.jpg",
+        width: 800,
+        height: 800,
+        alt: "Rising Tide Property Group",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Rising Tide Property Group",
     description:
       "Commercial real estate investment on Florida's Space Coast. Real Assets. Real Partners.",
+    images: ["https://risingtidepg.com/images/nicholas-white.jpg"],
   },
   alternates: {
     canonical: "https://risingtidepg.com",
   },
+};
+
+// LocalBusiness JSON-LD schema for local SEO
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  name: "Rising Tide Property Group",
+  url: "https://risingtidepg.com",
+  email: "nick@risingtidepg.com",
+  description:
+    "Commercial real estate investment and operations firm focused on Florida's Space Coast.",
+  areaServed: [
+    { "@type": "City", name: "Melbourne, FL" },
+    { "@type": "City", name: "Cocoa, FL" },
+    { "@type": "City", name: "Titusville, FL" },
+    { "@type": "AdministrativeArea", name: "Brevard County, FL" },
+  ],
+  founder: {
+    "@type": "Person",
+    name: "Nicholas White",
+    jobTitle: "Founder & Principal",
+    image: "https://risingtidepg.com/images/nicholas-white.jpg",
+  },
+  image: "https://risingtidepg.com/images/nicholas-white.jpg",
+  sameAs: [
+    "https://www.linkedin.com/company/rising-tide-property-group-partners/",
+  ],
 };
 
 // Organization JSON-LD schema
@@ -86,6 +131,12 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(organizationSchema),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessSchema),
           }}
         />
       </head>

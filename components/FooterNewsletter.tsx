@@ -14,7 +14,13 @@ export default function FooterNewsletter() {
       const res = await fetch("/api/newsletter", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, source: "footer_newsletter" }),
+        body: JSON.stringify({
+          email,
+          source: "footer_newsletter",
+          utm: Object.fromEntries(
+            new URLSearchParams(window.location.search)
+          ),
+        }),
       });
 
       if (res.ok) {

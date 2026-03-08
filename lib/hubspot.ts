@@ -108,7 +108,8 @@ export async function createOrUpdateContact(
 export async function subscribeToNewsletter(
   email: string,
   role?: string,
-  leadSource: string = "newsletter"
+  leadSource: string = "newsletter",
+  utmProperties: Record<string, string> = {}
 ): Promise<HubSpotResponse> {
   return createOrUpdateContact({
     email,
@@ -116,5 +117,6 @@ export async function subscribeToNewsletter(
     hs_lead_status: "NEW",
     ...(role && { contact_role: role }),
     lead_source: leadSource,
+    ...utmProperties,
   });
 }
