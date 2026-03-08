@@ -4,6 +4,7 @@ import Link from "next/link";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
 import FadeIn from "@/components/FadeIn";
 import MdxContent from "@/components/MdxContent";
+import BlogCTA from "@/components/BlogCTA";
 
 interface Props {
   params: { slug: string };
@@ -153,6 +154,7 @@ export default async function BlogPostPage({ params }: Props) {
               <MdxContent source={post.content} />
             </article>
           </FadeIn>
+          <BlogCTA />
         </div>
       </section>
     </>

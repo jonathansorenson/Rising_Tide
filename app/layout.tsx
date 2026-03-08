@@ -90,7 +90,14 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans antialiased">
-        {/* Google Analytics 4 — Replace G-W6YKH5E0E9 with your Measurement ID */}
+        {/* HubSpot Tracking Code */}
+        <Script
+          type="text/javascript"
+          id="hs-tracking"
+          src="//js.hs-scripts.com/245464685.js"
+          strategy="afterInteractive"
+        />
+        {/* Google Analytics 4 */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-W6YKH5E0E9"
           strategy="afterInteractive"

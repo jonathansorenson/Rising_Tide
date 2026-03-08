@@ -15,20 +15,17 @@ export default function ContactForm() {
     const form = e.currentTarget;
     const formData = new FormData(form);
 
-    const res = await fetch(
-      `${process.env.NEXT_PUBLIC_SUPABASE_URL}/functions/v1/contact-form`,
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: formData.get("name"),
-          email: formData.get("email"),
-          phone: formData.get("phone") || null,
-          contact_type: formData.get("type") || null,
-          message: formData.get("message"),
-        }),
-      }
-    );
+    const res = await fetch("/api/contacts", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: formData.get("name"),
+        email: formData.get("email"),
+        phone: formData.get("phone") || null,
+        contact_type: formData.get("type") || null,
+        message: formData.get("message"),
+      }),
+    });
 
     setSubmitting(false);
 

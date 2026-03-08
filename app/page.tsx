@@ -215,6 +215,51 @@ export default function HomePage() {
           </FadeIn>
         </div>
       </section>
+
+      {/* Market Report CTA */}
+      <SectionDivider fromColor="bg-sage/20" toColor="bg-white" />
+      <section className="bg-white py-16 md:py-24">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="bg-slate-dark rounded-lg p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="max-w-lg">
+              <FadeIn>
+                <span className="text-xs uppercase tracking-wider text-sage font-semibold">
+                  Free Resource
+                </span>
+                <h3 className="mt-2 text-2xl md:text-3xl font-bold text-white tracking-tight">
+                  Space Coast CRE Market Report
+                </h3>
+                <p className="mt-3 text-white/70 leading-relaxed">
+                  Industrial vacancy trends, absorption data, and the aerospace
+                  expansion driving Florida&apos;s fastest-growing commercial
+                  market. Updated quarterly.
+                </p>
+              </FadeIn>
+            </div>
+            <FadeIn delay={0.15}>
+              <Link
+                href="/resources/market-report"
+                className="inline-flex items-center px-8 py-3.5 bg-warm-gold text-white font-semibold rounded hover:bg-warm-gold/90 transition-all hover:shadow-lg whitespace-nowrap"
+              >
+                Download Report
+                <svg
+                  className="w-4 h-4 ml-2"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                  />
+                </svg>
+              </Link>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

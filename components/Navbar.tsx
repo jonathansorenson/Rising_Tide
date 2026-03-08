@@ -12,6 +12,7 @@ const navLinks = [
   { href: "/track-record", label: "Track Record" },
   { href: "/about", label: "About" },
   { href: "/blog", label: "Blog" },
+  { href: "/resources", label: "Resources" },
 ];
 
 export default function Navbar() {

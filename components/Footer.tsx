@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import FooterNewsletter from "@/components/FooterNewsletter";
 
 const footerLinks = [
   { href: "/approach", label: "Approach" },
@@ -8,11 +9,15 @@ const footerLinks = [
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
   { href: "/blog", label: "Blog" },
+  { href: "/resources", label: "Resources" },
 ];
 
 export default function Footer() {
   return (
     <footer className="bg-slate-dark text-white">
+      {/* Newsletter Signup */}
+      <FooterNewsletter />
+
       {/* CTA Band */}
       <div className="border-b border-white/10">
         <div className="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
