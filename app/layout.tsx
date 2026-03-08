@@ -38,10 +38,10 @@ export const metadata: Metadata = {
     url: "https://risingtidepg.com",
     images: [
       {
-        url: "https://risingtidepg.com/images/nicholas-white.jpg",
-        width: 800,
-        height: 800,
-        alt: "Rising Tide Property Group",
+        url: "https://risingtidepg.com/images/og-card.png",
+        width: 1200,
+        height: 630,
+        alt: "Rising Tide Property Group — Commercial Real Estate on Florida's Space Coast",
       },
     ],
   },
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     title: "Rising Tide Property Group",
     description:
       "Commercial real estate investment on Florida's Space Coast. Real Assets. Real Partners.",
-    images: ["https://risingtidepg.com/images/nicholas-white.jpg"],
+    images: ["https://risingtidepg.com/images/og-card.png"],
   },
   alternates: {
     canonical: "https://risingtidepg.com",
