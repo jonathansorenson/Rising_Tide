@@ -69,6 +69,9 @@ const organizationSchema = {
     "NNN Lease Properties",
     "Value-Add Real Estate",
   ],
+  sameAs: [
+    "https://www.linkedin.com/company/rising-tide-property-group-partners/",
+  ],
 };
 
 export default function RootLayout({

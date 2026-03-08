@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import FadeIn from "@/components/FadeIn";
 import ProcessStep from "@/components/ProcessStep";
 import SectionDivider from "@/components/SectionDivider";
+import LatestInsights from "@/components/LatestInsights";
 
 export const metadata: Metadata = {
   title: "Our Approach",
@@ -144,6 +145,13 @@ export default function ApproachPage() {
           </div>
         </div>
       </section>
+
+      {/* Dynamic Blog Links */}
+      <LatestInsights
+        filterTag="Industrial"
+        title="Related Insights"
+        count={3}
+      />
     </>
   );
 }

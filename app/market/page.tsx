@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Hero from "@/components/Hero";
 import FadeIn from "@/components/FadeIn";
 import SectionDivider from "@/components/SectionDivider";
+import LatestInsights from "@/components/LatestInsights";
 
 export const metadata: Metadata = {
   title: "Why the Space Coast",
@@ -168,6 +169,14 @@ export default function MarketPage() {
           </div>
         </div>
       </section>
+
+      {/* Dynamic Blog Links */}
+      <SectionDivider fromColor="bg-white" toColor="bg-slate-dark" />
+      <LatestInsights
+        filterTag="Space Coast"
+        title="Market Insights"
+        count={3}
+      />
     </>
   );
 }
