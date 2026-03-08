@@ -9,6 +9,7 @@ export interface BlogPost {
   excerpt: string;
   author: string;
   tags: string[];
+  keywords?: string[];
   content: string;
 }
 
@@ -29,6 +30,7 @@ export function getAllPosts(): Omit<BlogPost, "content">[] {
       excerpt: data.excerpt ?? "",
       author: data.author ?? "Rising Tide Property Group",
       tags: data.tags ?? [],
+      keywords: data.keywords ?? undefined,
     };
   });
 
@@ -51,6 +53,7 @@ export function getPostBySlug(slug: string): BlogPost | null {
     excerpt: data.excerpt ?? "",
     author: data.author ?? "Rising Tide Property Group",
     tags: data.tags ?? [],
+    keywords: data.keywords ?? undefined,
     content,
   };
 }

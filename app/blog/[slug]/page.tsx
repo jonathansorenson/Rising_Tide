@@ -18,9 +18,30 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getPostBySlug(params.slug);
   if (!post) return { title: "Post Not Found" };
 
+  const url = `https://risingtidepg.com/blog/${params.slug}`;
+
   return {
     title: post.title,
     description: post.excerpt,
+    keywords: post.keywords ?? post.tags,
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      type: "article",
+      url,
+      siteName: "Rising Tide Property Group",
+      publishedTime: post.date,
+      authors: [post.author],
+      tags: post.tags,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+    },
+    alternates: {
+      canonical: url,
+    },
   };
 }
 
@@ -28,8 +49,40 @@ export default async function BlogPostPage({ params }: Props) {
   const post = getPostBySlug(params.slug);
   if (!post) notFound();
 
+  // BlogPosting JSON-LD schema
+  const blogPostingSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.date,
+    dateModified: post.date,
+    author: {
+      "@type": "Person",
+      name: post.author,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Rising Tide Property Group",
+      url: "https://risingtidepg.com",
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://risingtidepg.com/blog/${params.slug}`,
+    },
+    keywords: (post.keywords ?? post.tags).join(", "),
+  };
+
   return (
     <>
+      {/* BlogPosting Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(blogPostingSchema),
+        }}
+      />
+
       {/* Hero */}
       <section className="relative bg-slate-dark text-white overflow-hidden">
         <div

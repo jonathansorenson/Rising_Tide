@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -11,6 +12,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://risingtidepg.com"),
   title: {
     default: "Rising Tide Property Group — Real Assets. Real Partners.",
     template: "%s | Rising Tide Property Group",
@@ -24,7 +26,49 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "Rising Tide Property Group",
+    url: "https://risingtidepg.com",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rising Tide Property Group",
+    description:
+      "Commercial real estate investment on Florida's Space Coast. Real Assets. Real Partners.",
+  },
+  alternates: {
+    canonical: "https://risingtidepg.com",
+  },
+};
+
+// Organization JSON-LD schema
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Rising Tide Property Group",
+  url: "https://risingtidepg.com",
+  description:
+    "Rising Tide Property Group acquires and operates commercial real estate across Florida's Space Coast and Treasure Coast — delivering institutional-quality returns with a hands-on, partner-first approach.",
+  email: "nick@risingtidepg.com",
+  areaServed: [
+    {
+      "@type": "Place",
+      name: "Space Coast, Florida",
+    },
+    {
+      "@type": "Place",
+      name: "Treasure Coast, Florida",
+    },
+    {
+      "@type": "Place",
+      name: "South Florida",
+    },
+  ],
+  knowsAbout: [
+    "Commercial Real Estate",
+    "Industrial Real Estate",
+    "Multifamily Investment",
+    "NNN Lease Properties",
+    "Value-Add Real Estate",
+  ],
 };
 
 export default function RootLayout({
@@ -34,7 +78,28 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.variable}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
+      </head>
       <body className="font-sans antialiased">
+        {/* Google Analytics 4 — Replace G-W6YKH5E0E9 with your Measurement ID */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-W6YKH5E0E9"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-W6YKH5E0E9');
+          `}
+        </Script>
         <Navbar />
         <main className="pt-16 md:pt-20">{children}</main>
         <Footer />
