@@ -117,6 +117,12 @@ const organizationSchema = {
   sameAs: [
     "https://www.linkedin.com/company/rising-tide-property-group-partners/",
   ],
+  owns: {
+    "@type": "WebApplication",
+    "name": "CRElytic",
+    "url": "https://www.crelytic.ai",
+    "description": "AI-powered commercial real estate analytics platform — deal underwriting, property dashboards, portfolio fund reporting, and ESG energy tracking.",
+  },
 };
 
 export default function RootLayout({

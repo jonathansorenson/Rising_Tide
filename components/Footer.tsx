@@ -91,11 +91,19 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 pt-6 border-t border-white/10 text-center">
+        <div className="mt-10 pt-6 border-t border-white/10 flex flex-col items-center gap-3">
           <p className="text-white/40 text-xs">
             &copy; {new Date().getFullYear()} Rising Tide Property Group. All
             rights reserved.
           </p>
+          <a
+            href="https://www.crelytic.ai"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white/30 hover:text-white/60 transition-colors text-xs"
+          >
+            CRE Analytics by CRElytic
+          </a>
         </div>
       </div>
     </footer>
