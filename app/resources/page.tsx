@@ -4,7 +4,7 @@ import FadeIn from "@/components/FadeIn";
 import Hero from "@/components/Hero";
 
 export const metadata: Metadata = {
-  title: "Resources",
+  title: "Resources — Market Reports & Broker Tools",
   description:
     "Free market reports, deal criteria, and broker partnership resources for CRE professionals on Florida's Space Coast.",
   keywords: [
@@ -14,6 +14,8 @@ export const metadata: Metadata = {
     "commercial real estate resources",
     "deal criteria CRE",
     "free real estate market report",
+    "Brevard County market report",
+    "CRE broker resources",
   ],
 };
 

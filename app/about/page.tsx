@@ -5,7 +5,7 @@ import FadeIn from "@/components/FadeIn";
 import SectionDivider from "@/components/SectionDivider";
 
 export const metadata: Metadata = {
-  title: "About Us",
+  title: "About Us — Nicholas White & Rising Tide",
   description:
     "Meet the team behind Rising Tide Property Group. Over 15 years of hands-on commercial real estate experience.",
   keywords: [

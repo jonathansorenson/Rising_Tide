@@ -102,7 +102,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="text-white/30 hover:text-white/60 transition-colors text-xs"
           >
-            CRE Analytics by CRElytic
+            AI-Powered CRE Analytics by CRElytic
           </a>
         </div>
       </div>

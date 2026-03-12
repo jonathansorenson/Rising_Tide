@@ -5,7 +5,7 @@ import SectionDivider from "@/components/SectionDivider";
 import LatestInsights from "@/components/LatestInsights";
 
 export const metadata: Metadata = {
-  title: "Why the Space Coast",
+  title: "Why the Space Coast — Brevard County CRE Market",
   description:
     "Brevard County, Florida is one of the fastest-growing metros in America. Learn why Florida's Space Coast is a compelling market for commercial real estate.",
   keywords: [

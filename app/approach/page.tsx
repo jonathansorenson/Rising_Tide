@@ -6,7 +6,7 @@ import SectionDivider from "@/components/SectionDivider";
 import LatestInsights from "@/components/LatestInsights";
 
 export const metadata: Metadata = {
-  title: "Our Approach",
+  title: "Our Approach — CRE Investment Strategy",
   description:
     "Defensive yield with growth upside. Learn how Rising Tide Property Group underwrites, acquires, and operates commercial real estate.",
   keywords: [

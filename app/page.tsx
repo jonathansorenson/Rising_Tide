@@ -216,8 +216,55 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Market Report CTA */}
+      {/* Technology — CRElytic Cross-Link */}
       <SectionDivider fromColor="bg-sage/20" toColor="bg-white" />
+      <section className="bg-white py-16 md:py-24">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="max-w-2xl">
+            <FadeIn>
+              <span className="text-xs uppercase tracking-wider text-warm-gold font-semibold">
+                Our Technology
+              </span>
+              <h2 className="mt-2 text-3xl md:text-4xl font-bold text-text-dark tracking-tight">
+                Powered by CRElytic
+              </h2>
+            </FadeIn>
+            <FadeIn delay={0.1}>
+              <p className="mt-4 text-text-dark/70 leading-relaxed">
+                Our proprietary AI-powered analytics platform drives smarter
+                underwriting, real-time portfolio monitoring, and data-driven
+                decision making across every asset we touch.
+              </p>
+            </FadeIn>
+            <FadeIn delay={0.2}>
+              <a
+                href="https://www.crelytic.ai"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center mt-6 text-sm font-semibold text-warm-gold hover:text-warm-gold/80 transition-colors"
+              >
+                Learn About CRElytic
+                <svg
+                  className="w-4 h-4 ml-1"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+              </a>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* Market Report CTA */}
+      <SectionDivider fromColor="bg-white" toColor="bg-white" />
       <section className="bg-white py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-6">
           <div className="bg-slate-dark rounded-lg p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">

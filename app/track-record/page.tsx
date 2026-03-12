@@ -4,9 +4,9 @@ import FadeIn from "@/components/FadeIn";
 import ProjectCard from "@/components/ProjectCard";
 
 export const metadata: Metadata = {
-  title: "Track Record",
+  title: "Track Record — $90M+ in CRE Transactions",
   description:
-    "Over $90M in transaction value across industrial, office, and multifamily asset classes. View our track record.",
+    "Over $90M in transaction value across industrial, office, and multifamily asset classes. View Rising Tide Property Group's commercial real estate track record.",
   keywords: [
     "commercial real estate track record",
     "CRE transaction history",

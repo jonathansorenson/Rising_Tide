@@ -3,10 +3,34 @@ import Hero from "@/components/Hero";
 import BlogCard from "@/components/BlogCard";
 import { getAllPosts } from "@/lib/blog";
 
-export const metadata: Metadata = {
-  title: "Blog",
+const blogSchema = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  name: "Rising Tide Property Group Blog",
   description:
-    "Insights on commercial real estate investing, Florida's Space Coast market, and value-add strategies from Rising Tide Property Group.",
+    "Market insights, investment analysis, and commercial real estate trends from Rising Tide Property Group.",
+  url: "https://risingtidepg.com/blog",
+  publisher: {
+    "@type": "Organization",
+    name: "Rising Tide Property Group",
+    url: "https://risingtidepg.com",
+  },
+};
+
+export const metadata: Metadata = {
+  title: "Blog — CRE Insights & Market Analysis",
+  description:
+    "Insights on commercial real estate investing, Florida's Space Coast market, industrial trends, and value-add strategies from Rising Tide Property Group.",
+  keywords: [
+    "commercial real estate blog",
+    "CRE market insights",
+    "Space Coast real estate news",
+    "industrial real estate trends",
+    "Florida CRE investment analysis",
+    "value-add real estate strategies",
+    "NNN lease investing blog",
+    "Brevard County commercial property",
+  ],
 };
 
 export default function BlogPage() {
@@ -14,6 +38,10 @@ export default function BlogPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+      />
       <Hero
         title="Blog"
         subtitle="Market insights, investment perspectives, and updates from Rising Tide Property Group."
