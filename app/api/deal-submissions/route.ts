@@ -16,6 +16,7 @@ export async function POST(request: NextRequest) {
       occupancy,
       description,
       referral_source,
+      file_path,
       website, // honeypot
     } = body;
 
@@ -74,6 +75,7 @@ export async function POST(request: NextRequest) {
               `Company: ${company || "Not specified"}`,
               `Referral Source: ${referral_source || "Not specified"}`,
               description ? `\nDescription: ${description}` : "",
+              file_path ? `\nOM/Teaser: ${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/deal-submissions/${file_path}` : "",
             ]
               .filter(Boolean)
               .join("\n"),

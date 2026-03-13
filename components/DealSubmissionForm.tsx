@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, FormEvent } from "react";
+import { useState, useRef, FormEvent } from "react";
+import { supabase } from "@/lib/supabase";
 
 const assetTypeOptions = [
   "Retail",
@@ -26,6 +27,8 @@ export default function DealSubmissionForm() {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
+  const [file, setFile] = useState<File | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -34,6 +37,23 @@ export default function DealSubmissionForm() {
 
     const form = e.currentTarget;
     const formData = new FormData(form);
+
+    // Upload file to Supabase Storage if provided
+    let fileUrl: string | null = null;
+    if (file) {
+      const timestamp = Date.now();
+      const safeName = file.name.replace(/[^a-zA-Z0-9._-]/g, "_");
+      const filePath = `${timestamp}_${safeName}`;
+      const { error: uploadError } = await supabase.storage
+        .from("deal-submissions")
+        .upload(filePath, file, { contentType: file.type });
+      if (uploadError) {
+        setSubmitting(false);
+        setError("File upload failed. Please try again or email the document directly to nick@risingtidepg.com.");
+        return;
+      }
+      fileUrl = filePath;
+    }
 
     const res = await fetch("/api/deal-submissions", {
       method: "POST",
@@ -50,6 +70,7 @@ export default function DealSubmissionForm() {
         occupancy: formData.get("occupancy") || null,
         description: formData.get("description") || null,
         referral_source: formData.get("referral_source") || null,
+        file_path: fileUrl,
         website: formData.get("website"), // honeypot
       }),
     });
@@ -277,6 +298,68 @@ export default function DealSubmissionForm() {
           placeholder="Key facts, deal thesis, or why you're bringing it to Rising Tide (500 char max)"
           className={`${inputClass} resize-none`}
         />
+      </div>
+
+      {/* File Upload */}
+      <div>
+        <label className="block text-sm font-medium text-text-dark mb-1.5">
+          Upload OM / Teaser{" "}
+          <span className="font-normal text-text-dark/40">(PDF, max 10MB)</span>
+        </label>
+        <div
+          className={`relative border-2 border-dashed rounded p-4 text-center transition-colors ${
+            file ? "border-warm-gold/50 bg-warm-gold/5" : "border-text-dark/20 hover:border-text-dark/40"
+          }`}
+        >
+          <input
+            ref={fileInputRef}
+            type="file"
+            accept=".pdf,application/pdf"
+            className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+            onChange={(e) => {
+              const selected = e.target.files?.[0] || null;
+              if (selected && selected.size > 10 * 1024 * 1024) {
+                setError("File must be under 10MB.");
+                setFile(null);
+                if (fileInputRef.current) fileInputRef.current.value = "";
+                return;
+              }
+              if (selected && selected.type !== "application/pdf") {
+                setError("Only PDF files are accepted.");
+                setFile(null);
+                if (fileInputRef.current) fileInputRef.current.value = "";
+                return;
+              }
+              setError("");
+              setFile(selected);
+            }}
+          />
+          {file ? (
+            <div className="flex items-center justify-center gap-2 text-sm text-text-dark">
+              <svg className="w-4 h-4 text-warm-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              <span className="font-medium">{file.name}</span>
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setFile(null);
+                  if (fileInputRef.current) fileInputRef.current.value = "";
+                }}
+                className="ml-2 text-text-dark/40 hover:text-red-500 transition-colors"
+              >
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+          ) : (
+            <p className="text-sm text-text-dark/40">
+              Click or drag to upload a PDF
+            </p>
+          )}
+        </div>
       </div>
 
       {/* Referral Source */}
