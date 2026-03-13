@@ -16,6 +16,23 @@ export const metadata: Metadata = {
     "Space Coast real estate investor",
     "hands-on property management",
   ],
+  alternates: {
+    canonical: "https://risingtidepg.com/about",
+  },
+  openGraph: {
+    title: "About Us — Nicholas White & Rising Tide",
+    description:
+      "Meet the team behind Rising Tide Property Group. Over 15 years of hands-on commercial real estate experience on Florida's Space Coast.",
+    url: "https://risingtidepg.com/about",
+    images: [
+      {
+        url: "https://risingtidepg.com/images/og-card.png",
+        width: 1200,
+        height: 630,
+        alt: "About Rising Tide Property Group",
+      },
+    ],
+  },
 };
 
 const values = [

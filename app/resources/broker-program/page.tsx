@@ -6,6 +6,31 @@ export const metadata: Metadata = {
   title: "Broker Partnership Program",
   description:
     "Co-investment and partnership opportunities for commercial real estate brokers. Learn about Rising Tide's broker network.",
+  keywords: [
+    "CRE broker partnership",
+    "commercial real estate broker program",
+    "co-investment opportunities",
+    "broker referral network Florida",
+    "Space Coast broker program",
+    "CRE deal sourcing partnership",
+  ],
+  alternates: {
+    canonical: "https://risingtidepg.com/resources/broker-program",
+  },
+  openGraph: {
+    title: "Broker Partnership Program — Rising Tide Property Group",
+    description:
+      "Co-investment and partnership opportunities for commercial real estate brokers on Florida's Space Coast.",
+    url: "https://risingtidepg.com/resources/broker-program",
+    images: [
+      {
+        url: "https://risingtidepg.com/images/og-card.png",
+        width: 1200,
+        height: 630,
+        alt: "Rising Tide Property Group Broker Partnership",
+      },
+    ],
+  },
 };
 
 const formFields = [

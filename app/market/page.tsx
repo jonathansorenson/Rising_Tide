@@ -17,6 +17,23 @@ export const metadata: Metadata = {
     "South Carolina real estate",
     "Nashville suburb investment",
   ],
+  alternates: {
+    canonical: "https://risingtidepg.com/market",
+  },
+  openGraph: {
+    title: "Our Markets — Florida, Southeast & Sun Belt CRE",
+    description:
+      "Rising Tide targets commercial real estate across Florida and select Sun Belt markets with favorable demographics and job growth.",
+    url: "https://risingtidepg.com/market",
+    images: [
+      {
+        url: "https://risingtidepg.com/images/og-card.png",
+        width: 1200,
+        height: 630,
+        alt: "Rising Tide Property Group Target Markets",
+      },
+    ],
+  },
 };
 
 const targetMarkets = [

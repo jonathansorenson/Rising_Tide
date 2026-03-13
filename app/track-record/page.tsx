@@ -14,6 +14,23 @@ export const metadata: Metadata = {
     "Florida commercial property",
     "real estate investment returns",
   ],
+  alternates: {
+    canonical: "https://risingtidepg.com/track-record",
+  },
+  openGraph: {
+    title: "Track Record — $300M+ in CRE Transactions",
+    description:
+      "Over $300M in transaction value across 2.5M+ SF and five asset classes. View Rising Tide Property Group's CRE track record.",
+    url: "https://risingtidepg.com/track-record",
+    images: [
+      {
+        url: "https://risingtidepg.com/images/og-card.png",
+        width: 1200,
+        height: 630,
+        alt: "Rising Tide Property Group Track Record",
+      },
+    ],
+  },
 };
 
 const aggregateStats = [

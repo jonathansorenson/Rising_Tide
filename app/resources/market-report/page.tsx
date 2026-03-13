@@ -6,6 +6,31 @@ export const metadata: Metadata = {
   title: "Space Coast CRE Market Report",
   description:
     "Download the quarterly Space Coast industrial and office market snapshot — vacancy trends, absorption data, and aerospace expansion analysis.",
+  keywords: [
+    "Space Coast market report",
+    "Brevard County CRE data",
+    "Florida industrial vacancy",
+    "aerospace real estate impact",
+    "quarterly CRE report",
+    "Space Coast industrial absorption",
+  ],
+  alternates: {
+    canonical: "https://risingtidepg.com/resources/market-report",
+  },
+  openGraph: {
+    title: "Space Coast CRE Market Report",
+    description:
+      "Quarterly Space Coast industrial and office market snapshot — vacancy trends, absorption data, and aerospace expansion analysis.",
+    url: "https://risingtidepg.com/resources/market-report",
+    images: [
+      {
+        url: "https://risingtidepg.com/images/og-card.png",
+        width: 1200,
+        height: 630,
+        alt: "Space Coast CRE Market Report — Rising Tide Property Group",
+      },
+    ],
+  },
 };
 
 const formFields = [

@@ -17,6 +17,23 @@ export const metadata: Metadata = {
     "Brevard County market report",
     "CRE broker resources",
   ],
+  alternates: {
+    canonical: "https://risingtidepg.com/resources",
+  },
+  openGraph: {
+    title: "Resources — Market Reports & Broker Tools",
+    description:
+      "Free market reports, deal criteria, and broker partnership resources for CRE professionals on Florida's Space Coast.",
+    url: "https://risingtidepg.com/resources",
+    images: [
+      {
+        url: "https://risingtidepg.com/images/og-card.png",
+        width: 1200,
+        height: 630,
+        alt: "Rising Tide Property Group CRE Resources",
+      },
+    ],
+  },
 };
 
 const resources = [

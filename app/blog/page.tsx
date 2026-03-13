@@ -31,6 +31,23 @@ export const metadata: Metadata = {
     "NNN lease investing blog",
     "Brevard County commercial property",
   ],
+  alternates: {
+    canonical: "https://risingtidepg.com/blog",
+  },
+  openGraph: {
+    title: "Blog — CRE Insights & Market Analysis",
+    description:
+      "Market insights, industrial trends, and value-add strategies from Rising Tide Property Group on Florida's Space Coast.",
+    url: "https://risingtidepg.com/blog",
+    images: [
+      {
+        url: "https://risingtidepg.com/images/og-card.png",
+        width: 1200,
+        height: 630,
+        alt: "Rising Tide Property Group Blog",
+      },
+    ],
+  },
 };
 
 export default function BlogPage() {

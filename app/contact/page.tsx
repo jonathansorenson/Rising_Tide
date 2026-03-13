@@ -4,7 +4,7 @@ import FadeIn from "@/components/FadeIn";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contact Us — Rising Tide Property Group",
   description:
     "Get in touch with Rising Tide Property Group. Whether you're a prospective investor, broker, or partner, we'd welcome the conversation.",
   keywords: [
@@ -14,6 +14,23 @@ export const metadata: Metadata = {
     "commercial real estate contact",
     "Space Coast real estate firm",
   ],
+  alternates: {
+    canonical: "https://risingtidepg.com/contact",
+  },
+  openGraph: {
+    title: "Contact Us — Rising Tide Property Group",
+    description:
+      "Get in touch with Rising Tide Property Group. Prospective investors, brokers, and partners welcome.",
+    url: "https://risingtidepg.com/contact",
+    images: [
+      {
+        url: "https://risingtidepg.com/images/og-card.png",
+        width: 1200,
+        height: 630,
+        alt: "Contact Rising Tide Property Group",
+      },
+    ],
+  },
 };
 
 export default function ContactPage() {

@@ -19,6 +19,23 @@ export const metadata: Metadata = {
     "boutique CRE firm",
     "small middle market real estate",
   ],
+  alternates: {
+    canonical: "https://risingtidepg.com/approach",
+  },
+  openGraph: {
+    title: "Our Approach — CRE Investment Strategy",
+    description:
+      "Defensive yield with growth upside. Learn how Rising Tide underwrites, acquires, and operates commercial real estate.",
+    url: "https://risingtidepg.com/approach",
+    images: [
+      {
+        url: "https://risingtidepg.com/images/og-card.png",
+        width: 1200,
+        height: 630,
+        alt: "Rising Tide Property Group Investment Approach",
+      },
+    ],
+  },
 };
 
 const criteria = [

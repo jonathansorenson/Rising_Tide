@@ -6,6 +6,31 @@ export const metadata: Metadata = {
   title: "Deal Flow Criteria",
   description:
     "What Rising Tide Property Group is actively buying — target asset classes, markets, deal sizes, and how to submit a deal.",
+  keywords: [
+    "CRE deal criteria",
+    "commercial real estate acquisition targets",
+    "Rising Tide buying criteria",
+    "NNN lease deals wanted",
+    "Florida industrial acquisition",
+    "value-add CRE opportunities",
+  ],
+  alternates: {
+    canonical: "https://risingtidepg.com/resources/deal-criteria",
+  },
+  openGraph: {
+    title: "Deal Flow Criteria — Rising Tide Property Group",
+    description:
+      "What Rising Tide Property Group is actively buying — target asset classes, markets, deal sizes, and how to submit a deal.",
+    url: "https://risingtidepg.com/resources/deal-criteria",
+    images: [
+      {
+        url: "https://risingtidepg.com/images/og-card.png",
+        width: 1200,
+        height: 630,
+        alt: "Rising Tide Property Group Deal Criteria",
+      },
+    ],
+  },
 };
 
 const formFields = [
