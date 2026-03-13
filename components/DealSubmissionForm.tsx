@@ -305,7 +305,7 @@ export default function DealSubmissionForm() {
       <div>
         <label className="block text-sm font-medium text-text-dark mb-1.5">
           Upload OM / Teaser{" "}
-          <span className="font-normal text-text-dark/40">(PDF, max 10MB)</span>
+          <span className="font-normal text-text-dark/40">(PDF, max 20MB)</span>
         </label>
         <div
           className={`relative border-2 border-dashed rounded p-4 text-center transition-colors ${
@@ -319,8 +319,8 @@ export default function DealSubmissionForm() {
             className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
             onChange={(e) => {
               const selected = e.target.files?.[0] || null;
-              if (selected && selected.size > 10 * 1024 * 1024) {
-                setError("File must be under 10MB.");
+              if (selected && selected.size > 20 * 1024 * 1024) {
+                setError("File must be under 20MB.");
                 setFile(null);
                 if (fileInputRef.current) fileInputRef.current.value = "";
                 return;
