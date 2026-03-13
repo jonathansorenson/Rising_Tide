@@ -5,6 +5,7 @@ import { supabase } from "@/lib/supabase";
 
 const assetTypeOptions = [
   "Retail",
+  "Office",
   "Medical Office",
   "Mixed-Use",
   "Industrial",
