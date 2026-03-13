@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { createClient } from "@supabase/supabase-js";
 import { createOrUpdateContact } from "@/lib/hubspot";
 
 export async function POST(request: NextRequest) {
@@ -53,6 +54,22 @@ export async function POST(request: NextRequest) {
       console.error("HubSpot contact creation failed:", hubspotResult.error);
     }
 
+    // Generate signed download URL if file was uploaded
+    let fileDownloadUrl: string | null = null;
+    if (file_path) {
+      const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+      if (serviceRoleKey) {
+        const adminClient = createClient(
+          process.env.NEXT_PUBLIC_SUPABASE_URL!,
+          serviceRoleKey
+        );
+        const { data: signedData } = await adminClient.storage
+          .from("deal-submissions")
+          .createSignedUrl(file_path, 60 * 60 * 24 * 30); // 30-day link
+        fileDownloadUrl = signedData?.signedUrl || null;
+      }
+    }
+
     // Forward to Supabase Edge Function
     const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
     if (supabaseUrl) {
@@ -75,7 +92,7 @@ export async function POST(request: NextRequest) {
               `Company: ${company || "Not specified"}`,
               `Referral Source: ${referral_source || "Not specified"}`,
               description ? `\nDescription: ${description}` : "",
-              file_path ? `\nOM/Teaser: ${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/deal-submissions/${file_path}` : "",
+              fileDownloadUrl ? `\nOM/Teaser: ${fileDownloadUrl}` : "",
             ]
               .filter(Boolean)
               .join("\n"),
