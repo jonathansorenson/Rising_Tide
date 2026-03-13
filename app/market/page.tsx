@@ -5,19 +5,85 @@ import SectionDivider from "@/components/SectionDivider";
 import LatestInsights from "@/components/LatestInsights";
 
 export const metadata: Metadata = {
-  title: "Why the Space Coast — Brevard County CRE Market",
+  title: "Our Markets — Florida, Southeast & Sun Belt CRE",
   description:
-    "Brevard County, Florida is one of the fastest-growing metros in America. Learn why Florida's Space Coast is a compelling market for commercial real estate.",
+    "Rising Tide targets commercial real estate across Florida and select Southeast and Sun Belt markets with favorable demographics, job growth, and expanding economic infrastructure.",
   keywords: [
     "Space Coast commercial real estate",
-    "Brevard County CRE",
-    "Florida industrial real estate",
-    "SpaceX real estate impact",
-    "aerospace defense real estate",
-    "Melbourne Florida investment",
-    "Space Coast economy growth",
+    "Florida CRE investment",
+    "Southeast real estate markets",
+    "Sun Belt commercial property",
+    "Palm Beach County CRE",
+    "South Carolina real estate",
+    "Nashville suburb investment",
   ],
 };
+
+const targetMarkets = [
+  {
+    market: "Space Coast",
+    tag: "PRIMARY",
+    state: "FL",
+    rationale:
+      "Deep market expertise. Kennedy Space Center tech economy, population growth, undersupplied retail & industrial.",
+  },
+  {
+    market: "Palm Beach County",
+    tag: null,
+    state: "FL",
+    rationale:
+      "Established relationship base. Affluent demographics, institutional-quality deal flow in the small/middle market.",
+  },
+  {
+    market: "Treasure Coast",
+    tag: null,
+    state: "FL",
+    rationale:
+      "Rapidly growing corridor between Palm Beach and Space Coast. Rising rents, low vacancy, limited supply.",
+  },
+  {
+    market: "Southwest Florida",
+    tag: null,
+    state: "FL",
+    rationale:
+      "Strong in-migration and population growth post-Ian. Retail and industrial fundamentals improving.",
+  },
+  {
+    market: "Wilmington / Brunswick County",
+    tag: null,
+    state: "NC",
+    rationale:
+      "Coastal growth market. Port expansion, defense sector, retiree and remote-worker in-migration. Low supply.",
+  },
+  {
+    market: "Greenville / Spartanburg",
+    tag: null,
+    state: "SC",
+    rationale:
+      "Manufacturing and logistics hub (BMW, Michelin, Amazon). Strong industrial & flex demand.",
+  },
+  {
+    market: "Myrtle Beach / Grand Strand",
+    tag: null,
+    state: "SC",
+    rationale:
+      "One of the fastest-growing MSAs in the US. Retail and light industrial driven by tourism and population growth.",
+  },
+  {
+    market: "Charleston Suburbs",
+    tag: null,
+    state: "SC",
+    rationale:
+      "Explosive residential and commercial growth. Boeing, Mercedes-Benz Vans, and Port of Charleston driving demand.",
+  },
+  {
+    market: "Franklin / Brentwood",
+    tag: null,
+    state: "TN",
+    rationale:
+      "Nashville suburb with exceptional income demographics. Retail, office, and medical demand driven by corporate relocations.",
+  },
+];
 
 const marketStats = [
   { value: "#1", label: "Jump in Ranking — Milken Institute Best Performing Cities" },
@@ -77,16 +143,52 @@ export default function MarketPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <Hero
-        title="Why Florida's Space Coast"
-        subtitle="One of America's fastest-growing metros — fueled by aerospace, defense, and high-tech manufacturing."
+        title="Our Markets"
+        subtitle="Rising Tide targets commercial real estate across Florida and select Southeast and Sun Belt markets characterized by favorable demographics, positive job and population growth, stable regulatory environments, and expanding economic infrastructure."
       />
+
+      {/* Target Markets Grid */}
+      <section className="bg-cream py-16 md:py-24">
+        <div className="max-w-6xl mx-auto px-6">
+          <FadeIn>
+            <h2 className="text-3xl md:text-4xl font-bold text-text-dark tracking-tight">
+              Target Markets
+            </h2>
+          </FadeIn>
+          <div className="mt-10 md:mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+            {targetMarkets.map((m, i) => (
+              <FadeIn key={m.market} delay={i * 0.06}>
+                <div className="bg-white rounded-lg p-6 h-full shadow-sm border border-sage/10">
+                  <div className="flex items-center gap-2">
+                    <h3 className="font-bold text-text-dark">{m.market}</h3>
+                    {m.tag && (
+                      <span className="text-[10px] font-bold uppercase tracking-wider bg-warm-gold/15 text-warm-gold px-2 py-0.5 rounded-full">
+                        {m.tag}
+                      </span>
+                    )}
+                  </div>
+                  <p className="mt-0.5 text-xs font-semibold text-text-dark/40 uppercase tracking-wider">
+                    {m.state}
+                  </p>
+                  <p className="mt-3 text-sm text-text-dark/60 leading-relaxed">
+                    {m.rationale}
+                  </p>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Space Coast — Primary Market */}
+      <SectionDivider fromColor="bg-cream" toColor="bg-sage/20" flip />
 
       {/* Key Stats */}
       <section className="bg-sage/20 py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-6">
           <FadeIn>
             <h2 className="text-3xl md:text-4xl font-bold text-text-dark tracking-tight text-center">
-              Market Rankings
+              Primary Market — Space Coast, Florida
             </h2>
           </FadeIn>
           <div className="mt-10 md:mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">

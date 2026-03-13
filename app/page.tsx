@@ -4,43 +4,24 @@ import StatCard from "@/components/StatCard";
 import SectionDivider from "@/components/SectionDivider";
 
 const stats = [
-  { value: "$90M+", label: "in Transactions Advised" },
+  { value: "$300M+", label: "Transactions, Dispositions & Financings" },
+  { value: "2.5M+", label: "SF Managed & Overseen (Career)" },
+  { value: "75,000", label: "SF Currently Under Direct Management" },
   { value: "15+", label: "Years of CRE Experience" },
-  { value: "100%", label: "Occupancy — Current Portfolio" },
-  { value: "8%+", label: "Going-In Cap Rates" },
 ];
 
 const assetClasses = [
-  {
-    title: "Industrial / Small-Bay Warehouse",
-    description:
-      "High-demand, low-vacancy asset class with NNN lease structures providing operating expense protection.",
-    icon: (
-      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-      </svg>
-    ),
-  },
-  {
-    title: "Office & Medical Office",
-    description:
-      "Value-add strategies converting gross leases to NNN and driving operational efficiency.",
-    icon: (
-      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
-      </svg>
-    ),
-  },
-  {
-    title: "Multifamily",
-    description:
-      "Targeting workforce housing in high-growth Florida markets with strong demographic tailwinds.",
-    icon: (
-      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-      </svg>
-    ),
-  },
+  "Retail",
+  "Industrial / Small-Bay Warehouse",
+  "Flex R&D",
+  "Office & Medical",
+  "Multifamily",
+];
+
+const targetMarkets = [
+  "Space Coast of Florida",
+  "South Florida / Palm Beach County",
+  "Secondary & tertiary markets with strong demographic growth, job growth & stable business climate",
 ];
 
 const employers = [
@@ -83,9 +64,15 @@ export default function HomePage() {
           <FadeIn delay={0.15}>
             <p className="mt-6 md:mt-8 text-lg md:text-xl text-white/75 max-w-2xl leading-relaxed">
               Rising Tide Property Group acquires and operates commercial real
-              estate across Florida&apos;s Space Coast and select U.S. markets
-              &mdash; delivering institutional-quality returns with a hands-on,
-              partner-first approach.
+              estate across Florida and select U.S. markets.
+            </p>
+            <p className="mt-4 text-base md:text-lg text-white/65 max-w-2xl leading-relaxed">
+              We are a boutique, partner-first firm focused on the small and
+              middle market &mdash; combining hands-on, day-to-day asset
+              management with the rigorous analysis typically reserved for
+              institutional platforms. Our approach prioritizes strong
+              risk-adjusted returns and transparent communication at every stage
+              of the investment lifecycle.
             </p>
           </FadeIn>
           <FadeIn delay={0.3}>
@@ -137,21 +124,37 @@ export default function HomePage() {
               Investment Focus
             </h2>
           </FadeIn>
-          <div className="mt-10 md:mt-14 space-y-8 md:space-y-0 md:grid md:grid-cols-3 md:gap-8">
-            {assetClasses.map((asset, i) => (
-              <FadeIn key={asset.title} delay={i * 0.12}>
-                <div className="bg-cream rounded-lg p-6 md:p-8 h-full">
-                  <div className="text-slate-dark">{asset.icon}</div>
-                  <h3 className="mt-4 text-lg font-bold text-text-dark">
-                    {asset.title}
-                  </h3>
-                  <p className="mt-2 text-sm text-text-dark/70 leading-relaxed">
-                    {asset.description}
-                  </p>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
+          <FadeIn delay={0.1}>
+            <div className="mt-8 flex flex-wrap gap-3">
+              {assetClasses.map((name) => (
+                <span
+                  key={name}
+                  className="px-5 py-2.5 bg-cream rounded-full text-sm font-semibold text-text-dark border border-sage/30"
+                >
+                  {name}
+                </span>
+              ))}
+            </div>
+          </FadeIn>
+
+          {/* Target Markets */}
+          <FadeIn delay={0.2}>
+            <h3 className="mt-14 text-xl md:text-2xl font-bold text-text-dark tracking-tight">
+              Target Markets
+            </h3>
+          </FadeIn>
+          <FadeIn delay={0.25}>
+            <div className="mt-6 flex flex-wrap gap-3">
+              {targetMarkets.map((market) => (
+                <span
+                  key={market}
+                  className="px-5 py-2.5 bg-sage/15 rounded-full text-sm font-medium text-text-dark/80 border border-sage/20"
+                >
+                  {market}
+                </span>
+              ))}
+            </div>
+          </FadeIn>
         </div>
       </section>
 

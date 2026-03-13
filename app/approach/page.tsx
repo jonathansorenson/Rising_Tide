@@ -16,14 +16,15 @@ export const metadata: Metadata = {
     "value-add real estate",
     "industrial real estate acquisition",
     "defensive yield investing",
-    "cap rate 8 percent",
+    "boutique CRE firm",
+    "small middle market real estate",
   ],
 };
 
 const criteria = [
   {
     title: "Strong Going-In Cash Flow",
-    desc: "Targeting 8%+ cap rates with immediate income generation from day one.",
+    desc: "In-place cash flow with positive leverage and a clear path to upside through leasing, capital improvements, or operational improvements.",
   },
   {
     title: "NNN Lease Structures",
@@ -79,7 +80,7 @@ const faqSchema = {
       name: "What is Rising Tide's investment strategy?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Rising Tide targets defensive yield with growth upside — typically 8%+ cap rate assets with NNN lease structures that protect against operating expense risk, combined with near-term lease rollovers that capture rent growth at fair market value.",
+        text: "Rising Tide targets strong in-place yields with identifiable value-add opportunities and a clear path to rent growth through the execution of a strategic business plan, combining rigorous underwriting with hands-on, day-to-day management.",
       },
     },
     {
@@ -113,8 +114,69 @@ export default function ApproachPage() {
         subtitle="Disciplined investing rooted in real operations experience — from the ground up."
       />
 
-      {/* Investment Philosophy */}
+      {/* Who We Are */}
       <section className="bg-cream py-16 md:py-24">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="max-w-3xl">
+            <FadeIn>
+              <h2 className="text-3xl md:text-4xl font-bold text-text-dark tracking-tight">
+                Who We Are
+              </h2>
+            </FadeIn>
+            <FadeIn delay={0.1}>
+              <p className="mt-6 text-text-dark/70 leading-relaxed">
+                Rising Tide operates in the space between mom-and-pop ownership
+                and institutional capital &mdash; bringing professional-grade
+                operations, underwriting discipline, and active asset management
+                to transactions that larger platforms overlook. We are
+                experienced operators, not passive managers, and we provide
+                direct access to smaller and mid-size investors who want
+                institutional quality without institutional minimums.
+              </p>
+            </FadeIn>
+            <FadeIn delay={0.15}>
+              <h3 className="mt-10 text-xl md:text-2xl font-bold text-text-dark tracking-tight">
+                How We Operate
+              </h3>
+              <p className="mt-4 text-text-dark/70 leading-relaxed">
+                Our foundation is disciplined management: rigorous deal
+                analysis, conservative underwriting, and proactive oversight at
+                the property level. Layered on top is an entrepreneurial
+                value-add orientation &mdash; we identify operational
+                inefficiencies, lease-up opportunities, and capital improvements
+                that unlock embedded upside. The result is a repeatable process
+                that generates strong risk-adjusted returns across market
+                cycles.
+              </p>
+            </FadeIn>
+            <FadeIn delay={0.2}>
+              <h3 className="mt-10 text-xl md:text-2xl font-bold text-text-dark tracking-tight">
+                Why It Matters
+              </h3>
+              <p className="mt-4 text-text-dark/70 leading-relaxed">
+                We don&apos;t compete with institutions &mdash; we operate where
+                they can&apos;t or won&apos;t. The small and middle market
+                offers compelling risk-adjusted entry points, less competition
+                for acquisitions, and greater potential for value creation
+                through active management. Our investors get access to these
+                opportunities backed by sophisticated analysis and a team that
+                treats every asset like it&apos;s the only one in the portfolio.
+              </p>
+            </FadeIn>
+            <FadeIn delay={0.25}>
+              <blockquote className="mt-10 border-l-4 border-warm-gold pl-6 py-4 bg-white rounded-r-lg">
+                <p className="text-lg font-semibold text-text-dark italic">
+                  &ldquo;Bigger and more professional than mom-and-pop. Nimble
+                  and focused where institutions aren&apos;t.&rdquo;
+                </p>
+              </blockquote>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* Defensive Yield + Growth */}
+      <section className="bg-cream pb-16 md:pb-24">
         <div className="max-w-6xl mx-auto px-6">
           <div className="max-w-3xl">
             <FadeIn>
@@ -124,19 +186,12 @@ export default function ApproachPage() {
             </FadeIn>
             <FadeIn delay={0.1}>
               <p className="mt-6 text-text-dark/70 leading-relaxed">
-                We target assets with strong going-in yields — typically 8%+
-                cap rates — supported by NNN lease structures that protect
-                against operating expense risk. Combined with a clear path to
-                rent growth through lease rollovers at fair market value, our
-                approach delivers durable income with meaningful upside.
-              </p>
-            </FadeIn>
-            <FadeIn delay={0.2}>
-              <p className="mt-4 text-text-dark/70 leading-relaxed">
-                This isn&apos;t theoretical. Our operations-first approach is
-                rooted in the founder&apos;s career starting from the ground up
-                — from property maintenance through acquisitions, underwriting,
-                leasing, and asset management. We manage what we own.
+                We target strong in-place yields with identifiable value-add
+                opportunities and a clear path to rent growth through the
+                execution of a strategic business plan. Our approach combines
+                rigorous underwriting with hands-on, day-to-day management
+                &mdash; delivering institutional-quality analysis at the
+                boutique level.
               </p>
             </FadeIn>
           </div>
