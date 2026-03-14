@@ -10,6 +10,7 @@ export interface BlogPost {
   author: string;
   tags: string[];
   keywords?: string[];
+  image?: string;
   content: string;
   readingTime: number;
 }
@@ -37,6 +38,7 @@ export function getAllPosts(): Omit<BlogPost, "content">[] {
       author: data.author ?? "Rising Tide Property Group",
       tags: data.tags ?? [],
       keywords: data.keywords ?? undefined,
+      image: data.image ?? undefined,
       readingTime: estimateReadingTime(content),
     };
   });
@@ -61,6 +63,7 @@ export function getPostBySlug(slug: string): BlogPost | null {
     author: data.author ?? "Rising Tide Property Group",
     tags: data.tags ?? [],
     keywords: data.keywords ?? undefined,
+    image: data.image ?? undefined,
     content,
     readingTime: estimateReadingTime(content),
   };

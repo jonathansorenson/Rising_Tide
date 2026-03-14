@@ -23,6 +23,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return { title: "Post Not Found" };
 
   const url = `https://risingtidepg.com/blog/${params.slug}`;
+  const ogImage = post.image
+    ? `https://risingtidepg.com${post.image}`
+    : "https://risingtidepg.com/images/og-card.png";
 
   return {
     title: post.title,
@@ -39,18 +42,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       tags: post.tags,
       images: [
         {
-          url: "https://risingtidepg.com/images/nicholas-white.jpg",
-          width: 800,
-          height: 800,
+          url: ogImage,
+          width: 1200,
+          height: 630,
           alt: post.title,
         },
       ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: post.title,
-      description: post.excerpt,
-      images: ["https://risingtidepg.com/images/nicholas-white.jpg"],
     },
     alternates: {
       canonical: url,
@@ -63,6 +60,9 @@ export default async function BlogPostPage({ params }: Props) {
   if (!post) notFound();
 
   const postUrl = `https://risingtidepg.com/blog/${params.slug}`;
+  const postOgImage = post.image
+    ? `https://risingtidepg.com${post.image}`
+    : "https://risingtidepg.com/images/og-card.png";
 
   // BlogPosting JSON-LD schema
   const blogPostingSchema = {
@@ -86,6 +86,7 @@ export default async function BlogPostPage({ params }: Props) {
       "@type": "WebPage",
       "@id": postUrl,
     },
+    image: postOgImage,
     keywords: (post.keywords ?? post.tags).join(", "),
     wordCount: post.content.trim().split(/\s+/).length,
   };

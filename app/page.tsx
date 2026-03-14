@@ -1,7 +1,17 @@
+import { Metadata } from "next";
 import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
 import StatCard from "@/components/StatCard";
 import SectionDivider from "@/components/SectionDivider";
+
+export const metadata: Metadata = {
+  title: "Rising Tide Property Group — Real Assets. Real Partners.",
+  description:
+    "Rising Tide Property Group acquires and operates commercial real estate across Florida's Space Coast and select U.S. markets — delivering institutional-quality returns with a hands-on, partner-first approach.",
+  alternates: {
+    canonical: "https://risingtidepg.com",
+  },
+};
 
 const stats = [
   { value: "$300M+", label: "Transactions, Dispositions & Financings" },
