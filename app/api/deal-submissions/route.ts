@@ -74,7 +74,7 @@ export async function POST(request: NextRequest) {
     const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
     if (supabaseUrl) {
       try {
-        await fetch(`${supabaseUrl}/functions/v1/contact-form`, {
+        const edgeResponse = await fetch(`${supabaseUrl}/functions/v1/contact-form`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -99,6 +99,11 @@ export async function POST(request: NextRequest) {
             hubspot_contact_id: hubspotResult.contactId || null,
           }),
         });
+        const edgeBody = await edgeResponse.text();
+        console.log(`Edge Function response: ${edgeResponse.status} — ${edgeBody}`);
+        if (!edgeResponse.ok) {
+          console.error("Edge Function error:", edgeResponse.status, edgeBody);
+        }
       } catch (supabaseError) {
         console.error("Supabase forwarding failed:", supabaseError);
       }

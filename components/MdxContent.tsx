@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import remarkGfm from "remark-gfm";
 import { ComponentPropsWithoutRef } from "react";
 
 const mdxComponents = {
@@ -89,6 +90,26 @@ const mdxComponents = {
       {...props}
     />
   ),
+  table: (props: ComponentPropsWithoutRef<"table">) => (
+    <div className="overflow-x-auto my-6">
+      <table
+        className="min-w-full border-collapse text-sm text-text-dark/80"
+        {...props}
+      />
+    </div>
+  ),
+  thead: (props: ComponentPropsWithoutRef<"thead">) => (
+    <thead className="bg-slate-dark/5" {...props} />
+  ),
+  th: (props: ComponentPropsWithoutRef<"th">) => (
+    <th
+      className="border border-text-dark/10 px-3 py-2 text-left font-semibold text-text-dark"
+      {...props}
+    />
+  ),
+  td: (props: ComponentPropsWithoutRef<"td">) => (
+    <td className="border border-text-dark/10 px-3 py-2" {...props} />
+  ),
 };
 
 interface MdxContentProps {
@@ -96,5 +117,11 @@ interface MdxContentProps {
 }
 
 export default function MdxContent({ source }: MdxContentProps) {
-  return <MDXRemote source={source} components={mdxComponents} />;
+  return (
+    <MDXRemote
+      source={source}
+      components={mdxComponents}
+      options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
+    />
+  );
 }
