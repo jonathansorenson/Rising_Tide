@@ -138,6 +138,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <head>
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://js.hs-scripts.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -152,19 +154,12 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans antialiased">
-        {/* HubSpot Tracking Code */}
-        <Script
-          type="text/javascript"
-          id="hs-tracking"
-          src="//js.hs-scripts.com/245464685.js"
-          strategy="afterInteractive"
-        />
-        {/* Google Analytics 4 */}
+        {/* Google Analytics 4 — deferred to avoid blocking LCP */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-W6YKH5E0E9"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="ga4-init" strategy="afterInteractive">
+        <Script id="ga4-init" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -172,6 +167,13 @@ export default function RootLayout({
             gtag('config', 'G-W6YKH5E0E9');
           `}
         </Script>
+        {/* HubSpot Tracking Code — deferred to avoid blocking LCP */}
+        <Script
+          type="text/javascript"
+          id="hs-tracking"
+          src="//js.hs-scripts.com/245464685.js"
+          strategy="lazyOnload"
+        />
         <Navbar />
         <main className="pt-16 md:pt-20">{children}</main>
         <Footer />

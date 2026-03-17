@@ -22,8 +22,17 @@ export default function Navbar() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", onScroll);
+    let ticking = false;
+    const onScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          setScrolled(window.scrollY > 20);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
@@ -47,6 +56,7 @@ export default function Navbar() {
             alt="Rising Tide Property Group"
             width={40}
             height={28}
+            priority
             className="transition-transform group-hover:scale-105"
           />
           <span className="text-white font-bold text-sm md:text-base tracking-tight leading-tight">
