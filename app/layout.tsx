@@ -119,6 +119,33 @@ const organizationSchema = {
     "NNN Lease Properties",
     "Value-Add Real Estate",
   ],
+  founder: {
+    "@type": "Person",
+    name: "Nicholas White",
+    jobTitle: "Founder & Principal",
+  },
+  employee: [
+    {
+      "@type": "Person",
+      name: "Nicholas West",
+      jobTitle: "Vice President",
+      alumniOf: {
+        "@type": "CollegeOrUniversity",
+        name: "Temple University",
+      },
+      sameAs: "https://www.linkedin.com/in/nicholasmwest/",
+    },
+    {
+      "@type": "Person",
+      name: "Jonathan Sorenson",
+      jobTitle: "Director of Operations",
+      alumniOf: {
+        "@type": "CollegeOrUniversity",
+        name: "Boise State University",
+      },
+      sameAs: "https://www.linkedin.com/in/jonathan-sorenson",
+    },
+  ],
   sameAs: [
     "https://www.linkedin.com/company/rising-tide-property-group-partners/",
   ],
