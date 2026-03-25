@@ -4,8 +4,6 @@ import { useState, FormEvent } from 'react';
 import { Lock, ArrowLeft, ArrowRight, CheckCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const DEAL_ROOM_PASSWORD = process.env.NEXT_PUBLIC_DEAL_ROOM_PASSWORD || '';
-
 interface DealRoomGateProps {
   onAuthenticated: () => void;
 }
@@ -15,17 +13,35 @@ export default function DealRoomGate({ onAuthenticated }: DealRoomGateProps) {
   const [password, setPassword] = useState('');
   const [passwordError, setPasswordError] = useState(false);
   const [shaking, setShaking] = useState(false);
+  const [verifying, setVerifying] = useState(false);
   const [formStatus, setFormStatus] = useState<'idle' | 'loading' | 'error'>('idle');
   const [formError, setFormError] = useState('');
 
-  function handlePasswordSubmit(e: FormEvent) {
+  async function handlePasswordSubmit(e: FormEvent) {
     e.preventDefault();
-    if (password === DEAL_ROOM_PASSWORD) {
-      onAuthenticated();
-    } else {
+    setVerifying(true);
+    setPasswordError(false);
+
+    try {
+      const res = await fetch('/api/verify-password', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password }),
+      });
+
+      if (res.ok) {
+        onAuthenticated();
+      } else {
+        setPasswordError(true);
+        setShaking(true);
+        setTimeout(() => setShaking(false), 600);
+      }
+    } catch {
       setPasswordError(true);
       setShaking(true);
       setTimeout(() => setShaking(false), 600);
+    } finally {
+      setVerifying(false);
     }
   }
 
@@ -150,8 +166,8 @@ export default function DealRoomGate({ onAuthenticated }: DealRoomGateProps) {
                 </p>
               )}
 
-              <button type="submit" className={copperBtn}>
-                Enter Deal Room
+              <button type="submit" disabled={verifying} className={copperBtn}>
+                {verifying ? 'Verifying...' : 'Enter Deal Room'}
               </button>
             </form>
 
