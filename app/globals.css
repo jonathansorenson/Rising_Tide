@@ -16,3 +16,43 @@ body {
     text-wrap: balance;
   }
 }
+
+/* Deal Room — Hero Animations */
+@keyframes heroGradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(100vh) translateX(0); opacity: 0; }
+  10% { opacity: 0.12; }
+  90% { opacity: 0.08; }
+  100% { transform: translateY(-10vh) translateX(30px); opacity: 0; }
+}
+
+@keyframes drawWave {
+  from { stroke-dashoffset: 400; }
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 0 rgba(212, 165, 116, 0); }
+  50% { box-shadow: 0 0 30px rgba(212, 165, 116, 0.25); }
+}
+
+@keyframes shimmerRow {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes scalePulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .deal-room-animate {
+    animation: none !important;
+    transition: opacity 0.3s ease !important;
+  }
+}
