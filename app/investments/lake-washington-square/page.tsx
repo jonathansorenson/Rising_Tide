@@ -1,14 +1,14 @@
 'use client';
 
-import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import {
   AreaChart, Area, BarChart, Bar, XAxis, YAxis, Tooltip,
-  ResponsiveContainer, Cell, ReferenceLine,
+  ResponsiveContainer, ReferenceLine,
 } from 'recharts';
 import {
   DollarSign, TrendingUp, Shield, Lock, ChevronDown, ArrowRight,
-  Building, Users, MapPin, FileText, Phone, Mail, ExternalLink,
+  Building, MapPin, Phone, Mail,
 } from 'lucide-react';
 
 /* ═══════════════════════════════════════════════════════════════
@@ -487,6 +487,7 @@ function WaveMark() {
 }
 
 /* Custom tooltip for NOI chart */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function NoiTooltip({ active, payload, label }: any) {
   if (!active || !payload?.length) return null;
   return (
@@ -528,8 +529,7 @@ export default function LakeWashingtonDealRoom() {
     else { setSortKey(key); setSortDir('desc'); }
   };
 
-  /* Hero section refs */
-  const heroRef = useRef<HTMLDivElement>(null);
+  /* Hero section visibility */
   const [heroVisible, setHeroVisible] = useState(false);
   useEffect(() => { setHeroVisible(true); }, []);
 
@@ -1080,6 +1080,7 @@ export default function LakeWashingtonDealRoom() {
                   />
                   <Tooltip
                     contentStyle={{ background: '#fff', border: '1px solid #6B8F7B30', borderRadius: 8 }}
+                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
                     formatter={(value: any, name: any) => [fmtNum(Number(value)) + ' SF', name === 'inline' ? 'Inline' : 'Anchor']}
                   />
                   <Bar dataKey="inline" stackId="a" fill="#6B8F7B" radius={[0, 0, 0, 0]} isAnimationActive={true} animationDuration={1500} />
