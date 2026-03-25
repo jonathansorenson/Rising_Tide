@@ -10,6 +10,7 @@ import {
   DollarSign, TrendingUp, Shield, Lock, ChevronDown, ArrowRight,
   Building, MapPin, Phone, Mail,
 } from 'lucide-react';
+import DealRoomGate from '@/components/DealRoomGate';
 
 /* ═══════════════════════════════════════════════════════════════
    CUSTOM HOOKS
@@ -503,6 +504,7 @@ function NoiTooltip({ active, payload, label }: any) {
    ═══════════════════════════════════════════════════════════════ */
 
 export default function LakeWashingtonDealRoom() {
+  const [authenticated, setAuthenticated] = useState(false);
   const progressBarRef = useScrollProgressRef();
   const activeSection = useScrollSpy(NAV_IDS);
   const heroGradientRef = useMouseGradient();
@@ -538,6 +540,11 @@ export default function LakeWashingtonDealRoom() {
   const noiInView = useInView(noiRef, { once: true, margin: '200px' });
   const leaseRef = useRef<HTMLDivElement>(null);
   const leaseInView = useInView(leaseRef, { once: true, margin: '200px' });
+
+  /* Password gate — must be after all hooks (Rules of Hooks) */
+  if (!authenticated) {
+    return <DealRoomGate onAuthenticated={() => setAuthenticated(true)} />;
+  }
 
   return (
     <div className="relative -mt-16 md:-mt-20">
