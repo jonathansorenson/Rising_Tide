@@ -1,0 +1,44 @@
+# Rising Tide Property Group
+
+> Rising Tide Property Group is a commercial real estate investment and operations firm focused on Florida's Space Coast, Treasure Coast, and select U.S. markets. We acquire, operate, and asset-manage industrial, retail, medical office, and workforce housing properties — delivering institutional-quality returns with a hands-on, partner-first approach.
+
+Rising Tide Property Group was founded by Nicholas White and is headquartered on Florida's Space Coast. The firm targets value-add and core-plus commercial real estate acquisitions in high-growth Florida submarkets driven by aerospace, defense, and technology employment.
+
+Rising Tide is the parent company of CRELYTIC (https://www.crelytic.ai), an AI-powered commercial real estate analytics platform.
+
+## Company Information
+
+- Website: https://risingtidepg.com
+- Subsidiary: CRELYTIC — https://www.crelytic.ai
+- LinkedIn: https://www.linkedin.com/company/rising-tide-property-group-partners/
+
+## Core Pages
+
+- [Our Approach](https://risingtidepg.com/approach): Investment philosophy, acquisition criteria, and how Rising Tide identifies CRE opportunities.
+- [Market Focus](https://risingtidepg.com/market): Analysis of Florida's Space Coast and Treasure Coast commercial real estate markets.
+- [Track Record](https://risingtidepg.com/track-record): Portfolio summary and investment performance history.
+- [About](https://risingtidepg.com/about): Team bios for Nicholas White (Founder & Principal), Nicholas West (Vice President), and Jonathan Sorenson (Director of Operations).
+- [Contact](https://risingtidepg.com/contact): Get in touch with the Rising Tide team.
+- [Submit a Deal](https://risingtidepg.com/submit-deal): Submit a commercial real estate acquisition opportunity for review.
+
+## Resources
+
+- [Market Report](https://risingtidepg.com/resources/market-report): Quarterly commercial real estate market data and analysis.
+- [Deal Criteria](https://risingtidepg.com/resources/deal-criteria): Acquisition parameters including property type, size, geography, and return targets.
+- [Broker Program](https://risingtidepg.com/resources/broker-program): Partnership program for commercial real estate brokers.
+
+## Blog — CRE Guides & Market Insights
+
+- [How to Read a Rent Roll](https://risingtidepg.com/blog/how-to-read-a-rent-roll): Step-by-step guide to analyzing commercial real estate rent rolls.
+- [AI in CRE Underwriting](https://risingtidepg.com/blog/ai-cre-underwriting): How artificial intelligence is transforming commercial real estate deal analysis.
+- [NOI Calculation Guide](https://risingtidepg.com/blog/noi-calculation-guide): Complete guide to calculating Net Operating Income for commercial properties.
+- [Best AI Tools for CRE](https://risingtidepg.com/blog/best-ai-cre-tools): Comparison of AI-powered tools for commercial real estate professionals.
+- [What Is Lease Abstraction?](https://risingtidepg.com/blog/what-is-lease-abstraction): Explanation of lease abstraction and its role in CRE due diligence.
+- [Cap Rate Explained](https://risingtidepg.com/blog/cap-rate-explained): Comprehensive guide to capitalization rates in commercial real estate.
+- [ESG in Real Estate Analytics](https://risingtidepg.com/blog/2026-03-23-esg-real-estate-analytics): How ESG metrics are reshaping commercial real estate investment decisions.
+- [Neighborhood Retail: Florida's Quiet Performer](https://risingtidepg.com/blog/neighborhood-retail-floridas-quiet-performer): Analysis of neighborhood retail as a CRE asset class in Florida.
+- [Medical Office: Florida's Most Resilient Asset Class](https://risingtidepg.com/blog/medical-office-floridas-most-resilient-asset-class): Why medical office properties outperform in Florida markets.
+- [Workforce Housing on the Treasure Coast](https://risingtidepg.com/blog/workforce-housing-treasure-coast-opportunity): Investment opportunity analysis for workforce housing in the Treasure Coast.
+- [Space & Defense Contractors Reshaping Florida's Economy](https://risingtidepg.com/blog/the-ripple-effect-space-and-defense-contractors-reshaping-floridas-economy): Economic impact of aerospace and defense on Florida CRE markets.
+- [Why Space Coast Industrial](https://risingtidepg.com/blog/why-space-coast-industrial): Investment thesis for industrial real estate on Florida's Space Coast.
+- [Flex Warehouse on the Space Coast](https://risingtidepg.com/blog/flex-warehouse-space-coast-florida): Analysis of flex warehouse demand driven by aerospace growth.
