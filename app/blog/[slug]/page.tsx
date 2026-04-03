@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: post.excerpt,
       type: "article",
       url,
-      siteName: "Rising Tide Property Group",
+      siteName: "Rising Tide Property Group Partners",
       publishedTime: post.date,
       authors: [post.author],
       tags: post.tags,
@@ -79,7 +79,7 @@ export default async function BlogPostPage({ params }: Props) {
     },
     publisher: {
       "@type": "Organization",
-      name: "Rising Tide Property Group",
+      name: "Rising Tide Property Group Partners",
       url: "https://risingtidepg.com",
     },
     mainEntityOfPage: {
@@ -107,7 +107,7 @@ export default async function BlogPostPage({ params }: Props) {
           className="absolute top-0 right-0 w-1/3 h-full opacity-10"
           style={{
             background:
-              "linear-gradient(135deg, #A8C5B8 0%, transparent 60%)",
+              "linear-gradient(135deg, #8FB5B2 0%, transparent 60%)",
           }}
         />
 

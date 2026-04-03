@@ -18,8 +18,8 @@ export default function Hero({ title, subtitle, dark = true }: HeroProps) {
         className="absolute top-0 right-0 w-1/3 h-full opacity-10"
         style={{
           background: dark
-            ? "linear-gradient(135deg, #A8C5B8 0%, transparent 60%)"
-            : "linear-gradient(135deg, #4A5D5E 0%, transparent 60%)",
+            ? "linear-gradient(135deg, #8FB5B2 0%, transparent 60%)"
+            : "linear-gradient(135deg, #3B4F5C 0%, transparent 60%)",
         }}
       />
       <div className="max-w-6xl mx-auto px-6 py-24 md:py-32 relative z-10">

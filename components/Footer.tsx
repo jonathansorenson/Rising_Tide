@@ -42,7 +42,7 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-3">
               <Image
                 src="/logo.svg"
-                alt="Rising Tide Property Group"
+                alt="Rising Tide Property Group Partners"
                 width={36}
                 height={24}
               />
@@ -50,7 +50,7 @@ export default function Footer() {
                 Rising Tide
                 <br />
                 <span className="font-normal text-white/70 text-xs">
-                  Property Group
+                  Property Group Partners
                 </span>
               </span>
             </Link>
@@ -94,17 +94,23 @@ export default function Footer() {
 
         <div className="mt-10 pt-6 border-t border-white/10 flex flex-col items-center gap-3">
           <p className="text-white/40 text-xs">
-            &copy; {new Date().getFullYear()} Rising Tide Property Group. All
+            &copy; {new Date().getFullYear()} Rising Tide Property Group Partners. All
             rights reserved.
           </p>
-          <a
-            href="https://www.crelytic.ai"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white/30 hover:text-white/60 transition-colors text-xs"
-          >
-            AI-Powered CRE Analytics by CRElytic
-          </a>
+          <div className="flex items-center gap-4">
+            <a
+              href="https://www.crelytic.ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/30 hover:text-white/60 transition-colors text-xs"
+            >
+              AI-Powered CRE Analytics by CRElytic
+            </a>
+            <span className="text-white/20 text-xs">&middot;</span>
+            <span className="text-white/20 text-xs">
+              Hero photo by Dillon Shook on Unsplash
+            </span>
+          </div>
         </div>
       </div>
     </footer>

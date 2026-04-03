@@ -1,13 +1,14 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
 import StatCard from "@/components/StatCard";
 import SectionDivider from "@/components/SectionDivider";
 
 export const metadata: Metadata = {
-  title: "Rising Tide Property Group — Real Assets. Real Partners.",
+  title: "Rising Tide Property Group Partners — Real Assets. Real Partners.",
   description:
-    "Rising Tide Property Group acquires and operates commercial real estate across Florida's Space Coast and select U.S. markets — delivering institutional-quality returns with a hands-on, partner-first approach.",
+    "Rising Tide Property Group Partners acquires and operates commercial real estate across Florida's Space Coast and select U.S. markets — delivering institutional-quality returns with a hands-on, partner-first approach.",
   alternates: {
     canonical: "https://risingtidepg.com",
   },
@@ -47,19 +48,23 @@ export default function HomePage() {
     <>
       {/* Hero */}
       <section className="relative bg-slate-dark text-white overflow-hidden">
+        {/* Background image */}
+        <Image
+          src="/images/hero-ocean.jpg"
+          alt=""
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+        />
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-slate-dark/70" />
         {/* Diagonal geometric accent */}
         <div
           className="absolute top-0 right-0 w-2/5 h-full"
           style={{
             background:
-              "linear-gradient(135deg, rgba(168,197,184,0.15) 0%, transparent 50%)",
-          }}
-        />
-        <div
-          className="absolute bottom-0 left-0 w-1/3 h-1/2"
-          style={{
-            background:
-              "linear-gradient(315deg, rgba(212,165,116,0.08) 0%, transparent 50%)",
+              "linear-gradient(135deg, rgba(143,181,178,0.12) 0%, transparent 50%)",
           }}
         />
 
@@ -73,7 +78,7 @@ export default function HomePage() {
           </FadeIn>
           <FadeIn delay={0.15}>
             <p className="mt-6 md:mt-8 text-lg md:text-xl text-white/75 max-w-2xl leading-relaxed">
-              Rising Tide Property Group acquires and operates commercial real
+              Rising Tide Property Group Partners acquires and operates commercial real
               estate across Florida and select U.S. markets.
             </p>
             <p className="mt-4 text-base md:text-lg text-white/65 max-w-2xl leading-relaxed">

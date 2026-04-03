@@ -5,11 +5,11 @@ import FadeIn from "@/components/FadeIn";
 import SectionDivider from "@/components/SectionDivider";
 
 export const metadata: Metadata = {
-  title: "About Us — Meet the Rising Tide Property Group Team",
+  title: "About Us — Meet the Rising Tide Property Group Partners Team",
   description:
-    "Meet Nicholas White, Nicholas West, and Jonathan Sorenson — the team behind Rising Tide Property Group. Over 15 years of hands-on commercial real estate experience in acquisitions, asset management, and operations across Florida.",
+    "Meet Nicholas White, Nicholas West, and Jonathan Sorenson — the team behind Rising Tide Property Group Partners. Over 15 years of hands-on commercial real estate experience in acquisitions, asset management, and operations across Florida.",
   keywords: [
-    "Rising Tide Property Group",
+    "Rising Tide Property Group Partners",
     "Nicholas White commercial real estate",
     "Nicholas West real estate",
     "Jonathan Sorenson operations",
@@ -23,16 +23,16 @@ export const metadata: Metadata = {
     canonical: "https://risingtidepg.com/about",
   },
   openGraph: {
-    title: "About Us — Meet the Rising Tide Property Group Team",
+    title: "About Us — Meet the Rising Tide Property Group Partners Team",
     description:
-      "Meet the team behind Rising Tide Property Group. Over 15 years of hands-on commercial real estate experience in acquisitions, asset management, and operations across Florida.",
+      "Meet the team behind Rising Tide Property Group Partners. Over 15 years of hands-on commercial real estate experience in acquisitions, asset management, and operations across Florida.",
     url: "https://risingtidepg.com/about",
     images: [
       {
         url: "https://risingtidepg.com/images/og-card.png",
         width: 1200,
         height: 630,
-        alt: "About Rising Tide Property Group Team",
+        alt: "About Rising Tide Property Group Partners Team",
       },
     ],
   },
@@ -75,7 +75,7 @@ export default function AboutPage() {
                 <div className="relative">
                   <Image
                     src="/images/nicholas-white.jpg"
-                    alt="Nicholas White, Founder & Principal of Rising Tide Property Group"
+                    alt="Nicholas White, Founder & Principal of Rising Tide Property Group Partners"
                     width={800}
                     height={800}
                     className="rounded-lg object-cover aspect-[3/4] object-top"

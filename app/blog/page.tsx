@@ -6,13 +6,13 @@ import { getAllPosts } from "@/lib/blog";
 const blogSchema = {
   "@context": "https://schema.org",
   "@type": "Blog",
-  name: "Rising Tide Property Group Blog",
+  name: "Rising Tide Property Group Partners Blog",
   description:
-    "Market insights, investment analysis, and commercial real estate trends from Rising Tide Property Group.",
+    "Market insights, investment analysis, and commercial real estate trends from Rising Tide Property Group Partners.",
   url: "https://risingtidepg.com/blog",
   publisher: {
     "@type": "Organization",
-    name: "Rising Tide Property Group",
+    name: "Rising Tide Property Group Partners",
     url: "https://risingtidepg.com",
   },
 };
@@ -20,7 +20,7 @@ const blogSchema = {
 export const metadata: Metadata = {
   title: "Blog — CRE Insights & Market Analysis",
   description:
-    "Insights on commercial real estate investing, Florida's Space Coast market, industrial trends, and value-add strategies from Rising Tide Property Group.",
+    "Insights on commercial real estate investing, Florida's Space Coast market, industrial trends, and value-add strategies from Rising Tide Property Group Partners.",
   keywords: [
     "commercial real estate blog",
     "CRE market insights",
@@ -37,14 +37,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Blog — CRE Insights & Market Analysis",
     description:
-      "Market insights, industrial trends, and value-add strategies from Rising Tide Property Group on Florida's Space Coast.",
+      "Market insights, industrial trends, and value-add strategies from Rising Tide Property Group Partners on Florida's Space Coast.",
     url: "https://risingtidepg.com/blog",
     images: [
       {
         url: "https://risingtidepg.com/images/og-card.png",
         width: 1200,
         height: 630,
-        alt: "Rising Tide Property Group Blog",
+        alt: "Rising Tide Property Group Partners Blog",
       },
     ],
   },
@@ -61,7 +61,7 @@ export default function BlogPage() {
       />
       <Hero
         title="Blog"
-        subtitle="Market insights, investment perspectives, and updates from Rising Tide Property Group."
+        subtitle="Market insights, investment perspectives, and updates from Rising Tide Property Group Partners."
       />
 
       <section className="bg-cream py-16 md:py-24">

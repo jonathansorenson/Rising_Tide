@@ -1,5 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40" fill="none">
-  <path d="M5 28 Q15 20 25 24 Q35 28 45 20 Q50 16 55 18" stroke="#D4A574" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.9"/>
-  <path d="M5 22 Q15 14 25 18 Q35 22 45 14 Q50 10 55 12" stroke="#6B8F7B" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.8"/>
-  <path d="M5 16 Q15 8 25 12 Q35 16 45 8 Q50 4 55 6" stroke="#A8C5B8" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.7"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 44" fill="none">
+  <path d="M5 36 Q15 28 25 32 Q35 36 45 28 Q50 24 55 26" stroke="#6B97A0" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.9"/>
+  <path d="M5 29 Q15 21 25 25 Q35 29 45 21 Q50 17 55 19" stroke="#7BA3A8" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.85"/>
+  <path d="M5 22 Q15 14 25 18 Q35 22 45 14 Q50 10 55 12" stroke="#8FB5B2" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.8"/>
+  <path d="M5 15 Q15 7 25 11 Q35 15 45 7 Q50 3 55 5" stroke="#C0A07E" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.85"/>
+  <path d="M5 8 Q15 0 25 4 Q35 8 45 0 Q50 -4 55 -2" stroke="#D4A574" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.9"/>
 </svg>

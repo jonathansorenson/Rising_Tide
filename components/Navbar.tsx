@@ -53,7 +53,7 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-3 group">
           <Image
             src="/logo.svg"
-            alt="Rising Tide Property Group"
+            alt="Rising Tide Property Group Partners"
             width={40}
             height={28}
             priority
@@ -63,7 +63,7 @@ export default function Navbar() {
             Rising Tide
             <br />
             <span className="font-normal text-white/70 text-xs">
-              Property Group
+              Property Group Partners
             </span>
           </span>
         </Link>

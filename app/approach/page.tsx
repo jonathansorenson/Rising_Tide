@@ -8,7 +8,7 @@ import LatestInsights from "@/components/LatestInsights";
 export const metadata: Metadata = {
   title: "Our Approach — CRE Investment Strategy",
   description:
-    "Defensive yield with growth upside. Learn how Rising Tide Property Group underwrites, acquires, and operates commercial real estate.",
+    "Defensive yield with growth upside. Learn how Rising Tide Property Group Partners underwrites, acquires, and operates commercial real estate.",
   keywords: [
     "CRE investment strategy",
     "commercial real estate underwriting",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
         url: "https://risingtidepg.com/images/og-card.png",
         width: 1200,
         height: 630,
-        alt: "Rising Tide Property Group Investment Approach",
+        alt: "Rising Tide Property Group Partners Investment Approach",
       },
     ],
   },
@@ -110,7 +110,7 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "What is the investment process at Rising Tide Property Group?",
+      name: "What is the investment process at Rising Tide Property Group Partners?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "Our five-step process includes: (1) Source — proprietary deal sourcing and broker relationships, (2) Underwrite — conservative financial modeling with sensitivity analysis, (3) Acquire — institutional-grade due diligence, (4) Operate — hands-on asset management to drive NOI, and (5) Realize — strategic dispositions timed to market conditions.",

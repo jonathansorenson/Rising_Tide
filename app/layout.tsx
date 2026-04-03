@@ -14,13 +14,13 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://risingtidepg.com"),
   title: {
-    default: "Rising Tide Property Group — Real Assets. Real Partners.",
-    template: "%s | Rising Tide Property Group",
+    default: "Rising Tide Property Group Partners — Real Assets. Real Partners.",
+    template: "%s | Rising Tide Property Group Partners",
   },
   description:
-    "Rising Tide Property Group acquires and operates commercial real estate across Florida's Space Coast and select U.S. markets — delivering institutional-quality returns with a hands-on, partner-first approach.",
+    "Rising Tide Property Group Partners acquires and operates commercial real estate across Florida's Space Coast and select U.S. markets — delivering institutional-quality returns with a hands-on, partner-first approach.",
   keywords: [
-    "Rising Tide Property Group",
+    "Rising Tide Property Group Partners",
     "commercial real estate investment",
     "Space Coast CRE",
     "Florida real estate investment",
@@ -34,25 +34,25 @@ export const metadata: Metadata = {
     "real estate private equity Florida",
   ],
   openGraph: {
-    title: "Rising Tide Property Group",
+    title: "Rising Tide Property Group Partners",
     description:
       "Commercial real estate investment on Florida's Space Coast. Real Assets. Real Partners.",
     type: "website",
     locale: "en_US",
-    siteName: "Rising Tide Property Group",
+    siteName: "Rising Tide Property Group Partners",
     url: "https://risingtidepg.com",
     images: [
       {
         url: "https://risingtidepg.com/images/og-card.png",
         width: 1200,
         height: 630,
-        alt: "Rising Tide Property Group — Commercial Real Estate on Florida's Space Coast",
+        alt: "Rising Tide Property Group Partners — Commercial Real Estate on Florida's Space Coast",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rising Tide Property Group",
+    title: "Rising Tide Property Group Partners",
     description:
       "Commercial real estate investment on Florida's Space Coast. Real Assets. Real Partners.",
     images: ["https://risingtidepg.com/images/og-card.png"],
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "RealEstateAgent",
-  name: "Rising Tide Property Group",
+  name: "Rising Tide Property Group Partners",
   url: "https://risingtidepg.com",
   email: "nick@risingtidepg.com",
   description:
@@ -93,10 +93,10 @@ const localBusinessSchema = {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Rising Tide Property Group",
+  name: "Rising Tide Property Group Partners",
   url: "https://risingtidepg.com",
   description:
-    "Rising Tide Property Group acquires and operates commercial real estate across Florida's Space Coast and Treasure Coast — delivering institutional-quality returns with a hands-on, partner-first approach.",
+    "Rising Tide Property Group Partners acquires and operates commercial real estate across Florida's Space Coast and Treasure Coast — delivering institutional-quality returns with a hands-on, partner-first approach.",
   email: "nick@risingtidepg.com",
   areaServed: [
     {
@@ -165,6 +165,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <head>
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.ico" sizes="32x32" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://js.hs-scripts.com" />
         <script

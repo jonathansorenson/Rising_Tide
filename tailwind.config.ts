@@ -9,14 +9,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        "slate-dark": "#4A5D5E",
-        sage: "#A8C5B8",
-        "sage-dark": "#6B8F7B",
+        "slate-dark": "#3B4F5C",
+        sage: "#8FB5B2",
+        "sage-dark": "#7BA3A8",
         "warm-gold": "#D4A574",
         copper: "#D4A574",
-        cream: "#F5F0E8",
+        "gold-muted": "#C0A07E",
+        cream: "#F2EDE6",
         white: "#FFFFFF",
-        "text-dark": "#2C3E3F",
+        "text-dark": "#3B4F5C",
+        "teal-deep": "#6B97A0",
         navy: "#0f1923",
       },
       fontFamily: {

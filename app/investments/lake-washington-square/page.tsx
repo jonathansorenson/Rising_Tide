@@ -1077,20 +1077,20 @@ export default function LakeWashingtonDealRoom() {
             {leaseInView && (
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={LEASE_EXPIRY} margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
-                  <XAxis dataKey="year" stroke="#4A5D5E50" tick={{ fill: '#2C3E3F99', fontSize: 12 }} axisLine={false} tickLine={false} />
+                  <XAxis dataKey="year" stroke="#3B4F5C50" tick={{ fill: '#3B4F5C99', fontSize: 12 }} axisLine={false} tickLine={false} />
                   <YAxis
-                    stroke="#4A5D5E30"
-                    tick={{ fill: '#2C3E3F99', fontSize: 12 }}
+                    stroke="#3B4F5C30"
+                    tick={{ fill: '#3B4F5C99', fontSize: 12 }}
                     axisLine={false}
                     tickLine={false}
                     tickFormatter={(v: number) => `${(v / 1000).toFixed(0)}K`}
                   />
                   <Tooltip
-                    contentStyle={{ background: '#fff', border: '1px solid #6B8F7B30', borderRadius: 8 }}
+                    contentStyle={{ background: '#fff', border: '1px solid #7BA3A830', borderRadius: 8 }}
                     // eslint-disable-next-line @typescript-eslint/no-explicit-any
                     formatter={(value: any, name: any) => [fmtNum(Number(value)) + ' SF', name === 'inline' ? 'Inline' : 'Anchor']}
                   />
-                  <Bar dataKey="inline" stackId="a" fill="#6B8F7B" radius={[0, 0, 0, 0]} isAnimationActive={true} animationDuration={1500} />
+                  <Bar dataKey="inline" stackId="a" fill="#7BA3A8" radius={[0, 0, 0, 0]} isAnimationActive={true} animationDuration={1500} />
                   <Bar dataKey="anchor" stackId="a" fill="#D4A574" radius={[4, 4, 0, 0]} isAnimationActive={true} animationDuration={1500} animationBegin={300} />
                 </BarChart>
               </ResponsiveContainer>

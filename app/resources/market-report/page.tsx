@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         url: "https://risingtidepg.com/images/og-card.png",
         width: 1200,
         height: 630,
-        alt: "Space Coast CRE Market Report — Rising Tide Property Group",
+        alt: "Space Coast CRE Market Report — Rising Tide Property Group Partners",
       },
     ],
   },
@@ -60,7 +60,7 @@ export default function MarketReportPage() {
         <div
           className="absolute top-0 right-0 w-1/3 h-full opacity-10"
           style={{
-            background: "linear-gradient(135deg, #A8C5B8 0%, transparent 60%)",
+            background: "linear-gradient(135deg, #8FB5B2 0%, transparent 60%)",
           }}
         />
         <div className="max-w-6xl mx-auto px-6 py-20 md:py-28 relative z-10">

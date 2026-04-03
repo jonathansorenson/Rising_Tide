@@ -4,11 +4,11 @@ import FadeIn from "@/components/FadeIn";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact Us — Rising Tide Property Group",
+  title: "Contact Us — Rising Tide Property Group Partners",
   description:
-    "Get in touch with Rising Tide Property Group. Whether you're a prospective investor, broker, or partner, we'd welcome the conversation.",
+    "Get in touch with Rising Tide Property Group Partners. Whether you're a prospective investor, broker, or partner, we'd welcome the conversation.",
   keywords: [
-    "contact Rising Tide Property Group",
+    "contact Rising Tide Property Group Partners",
     "CRE investment inquiry",
     "broker partnership Florida",
     "commercial real estate contact",
@@ -18,16 +18,16 @@ export const metadata: Metadata = {
     canonical: "https://risingtidepg.com/contact",
   },
   openGraph: {
-    title: "Contact Us — Rising Tide Property Group",
+    title: "Contact Us — Rising Tide Property Group Partners",
     description:
-      "Get in touch with Rising Tide Property Group. Prospective investors, brokers, and partners welcome.",
+      "Get in touch with Rising Tide Property Group Partners. Prospective investors, brokers, and partners welcome.",
     url: "https://risingtidepg.com/contact",
     images: [
       {
         url: "https://risingtidepg.com/images/og-card.png",
         width: 1200,
         height: 630,
-        alt: "Contact Rising Tide Property Group",
+        alt: "Contact Rising Tide Property Group Partners",
       },
     ],
   },
@@ -54,7 +54,7 @@ export default function ContactPage() {
               <div className="space-y-8">
                 <div>
                   <h3 className="text-lg font-bold text-text-dark">
-                    Rising Tide Property Group
+                    Rising Tide Property Group Partners
                   </h3>
                   <p className="mt-2 text-sm text-text-dark/60 leading-relaxed">
                     Florida&apos;s Space Coast (Brevard County)

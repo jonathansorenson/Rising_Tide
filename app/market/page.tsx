@@ -30,7 +30,7 @@ export const metadata: Metadata = {
         url: "https://risingtidepg.com/images/og-card.png",
         width: 1200,
         height: 630,
-        alt: "Rising Tide Property Group Target Markets",
+        alt: "Rising Tide Property Group Partners Target Markets",
       },
     ],
   },
