@@ -59,15 +59,6 @@ export default function HomePage() {
         />
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-slate-dark/70" />
-        {/* Diagonal geometric accent */}
-        <div
-          className="absolute top-0 right-0 w-2/5 h-full"
-          style={{
-            background:
-              "linear-gradient(135deg, rgba(143,181,178,0.12) 0%, transparent 50%)",
-          }}
-        />
-
         <div className="max-w-6xl mx-auto px-6 py-24 md:py-36 lg:py-44 relative z-10">
           <FadeIn>
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-balance max-w-3xl">
