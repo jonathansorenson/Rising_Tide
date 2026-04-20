@@ -6,7 +6,7 @@ import Hero from "@/components/Hero";
 export const metadata: Metadata = {
   title: "Resources — Market Reports & Broker Tools",
   description:
-    "Free market reports, deal criteria, and broker partnership resources for CRE professionals on Florida's Space Coast.",
+    "Access Rising Tide's free Space Coast CRE market reports, deal-flow criteria sheets, and broker partnership program materials for investors and brokers.",
   keywords: [
     "CRE market report Florida",
     "Space Coast real estate data",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Resources — Market Reports & Broker Tools",
     description:
-      "Free market reports, deal criteria, and broker partnership resources for CRE professionals on Florida's Space Coast.",
+      "Access Rising Tide's free Space Coast CRE market reports, deal-flow criteria sheets, and broker partnership program materials for investors and brokers.",
     url: "https://risingtidepg.com/resources",
     images: [
       {

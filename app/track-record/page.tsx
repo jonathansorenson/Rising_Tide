@@ -5,7 +5,7 @@ import FadeIn from "@/components/FadeIn";
 export const metadata: Metadata = {
   title: "Track Record — $300M+ in CRE Transactions",
   description:
-    "Over $300M in transaction value across 2.5M+ SF and five asset classes. View Rising Tide Property Group Partners's commercial real estate track record.",
+    "Review Rising Tide's track record: $300M+ transacted, 2.5M+ SF managed across industrial, retail, office, medical, and multifamily deals in Florida and beyond.",
   keywords: [
     "commercial real estate track record",
     "CRE transaction history",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Track Record — $300M+ in CRE Transactions",
     description:
-      "Over $300M in transaction value across 2.5M+ SF and five asset classes. View Rising Tide Property Group Partners's CRE track record.",
+      "Review Rising Tide's track record: $300M+ transacted, 2.5M+ SF managed across industrial, retail, office, medical, and multifamily deals in Florida and beyond.",
     url: "https://risingtidepg.com/track-record",
     images: [
       {

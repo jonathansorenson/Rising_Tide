@@ -8,7 +8,7 @@ import SectionDivider from "@/components/SectionDivider";
 export const metadata: Metadata = {
   title: "Rising Tide Property Group Partners — Real Assets. Real Partners.",
   description:
-    "Rising Tide Property Group Partners acquires and operates commercial real estate across Florida's Space Coast and select U.S. markets — delivering institutional-quality returns with a hands-on, partner-first approach.",
+    "Invest in Space Coast commercial real estate with a boutique, partner-first firm combining hands-on operations and institutional-grade underwriting across Florida.",
   alternates: {
     canonical: "https://risingtidepg.com",
   },

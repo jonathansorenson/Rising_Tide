@@ -5,7 +5,7 @@ import GatedForm from "@/components/GatedForm";
 export const metadata: Metadata = {
   title: "Deal Flow Criteria",
   description:
-    "What Rising Tide Property Group Partners is actively buying — target asset classes, markets, deal sizes, and how to submit a deal.",
+    "Download Rising Tide's CRE deal criteria: target asset classes, preferred Florida and Southeast markets, lease structures, and how brokers submit qualified deals.",
   keywords: [
     "CRE deal criteria",
     "commercial real estate acquisition targets",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Deal Flow Criteria — Rising Tide Property Group Partners",
     description:
-      "What Rising Tide Property Group Partners is actively buying — target asset classes, markets, deal sizes, and how to submit a deal.",
+      "Download Rising Tide's CRE deal criteria: target asset classes, preferred Florida and Southeast markets, lease structures, and how brokers submit qualified deals.",
     url: "https://risingtidepg.com/resources/deal-criteria",
     images: [
       {

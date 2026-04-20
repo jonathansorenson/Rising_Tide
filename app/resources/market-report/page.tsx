@@ -5,7 +5,7 @@ import GatedForm from "@/components/GatedForm";
 export const metadata: Metadata = {
   title: "Space Coast CRE Market Report",
   description:
-    "Download the quarterly Space Coast industrial and office market snapshot — vacancy trends, absorption data, and aerospace expansion analysis.",
+    "Download Rising Tide's quarterly Space Coast CRE market report: Brevard County industrial and office vacancy, absorption, lease rates, and aerospace demand drivers.",
   keywords: [
     "Space Coast market report",
     "Brevard County CRE data",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Space Coast CRE Market Report",
     description:
-      "Quarterly Space Coast industrial and office market snapshot — vacancy trends, absorption data, and aerospace expansion analysis.",
+      "Download Rising Tide's quarterly Space Coast CRE market report: Brevard County industrial and office vacancy, absorption, lease rates, and aerospace demand drivers.",
     url: "https://risingtidepg.com/resources/market-report",
     images: [
       {

@@ -7,7 +7,7 @@ import DealSubmissionForm from "@/components/DealSubmissionForm";
 export const metadata: Metadata = {
   title: "Submit a Deal",
   description:
-    "Submit a commercial real estate deal to Rising Tide Property Group Partners. We review every submission and respond within 3-5 business days.",
+    "Submit a CRE deal to Rising Tide: $1M–$25M acquisitions across retail, industrial, medical office, and multifamily. LOI within 5 business days for qualified deals.",
   keywords: [
     "submit CRE deal",
     "commercial real estate acquisition",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Submit a Deal — Rising Tide Property Group Partners",
     description:
-      "Submit a commercial real estate deal to Rising Tide Property Group Partners. We review every submission and respond within 3-5 business days.",
+      "Submit a CRE deal to Rising Tide: $1M–$25M acquisitions across retail, industrial, medical office, and multifamily. LOI within 5 business days for qualified deals.",
     url: "https://risingtidepg.com/submit-deal",
     images: [
       {

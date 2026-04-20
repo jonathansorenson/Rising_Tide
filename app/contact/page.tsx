@@ -6,7 +6,7 @@ import ContactForm from "@/components/ContactForm";
 export const metadata: Metadata = {
   title: "Contact Us — Rising Tide Property Group Partners",
   description:
-    "Get in touch with Rising Tide Property Group Partners. Whether you're a prospective investor, broker, or partner, we'd welcome the conversation.",
+    "Contact Rising Tide to discuss Space Coast CRE investments, broker partnerships, or tenant inquiries. Every message is answered personally by a principal.",
   keywords: [
     "contact Rising Tide Property Group Partners",
     "CRE investment inquiry",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Contact Us — Rising Tide Property Group Partners",
     description:
-      "Get in touch with Rising Tide Property Group Partners. Prospective investors, brokers, and partners welcome.",
+      "Contact Rising Tide to discuss Space Coast CRE investments, broker partnerships, or tenant inquiries. Every message is answered personally by a principal.",
     url: "https://risingtidepg.com/contact",
     images: [
       {

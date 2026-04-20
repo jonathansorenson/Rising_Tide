@@ -7,7 +7,7 @@ import LatestInsights from "@/components/LatestInsights";
 export const metadata: Metadata = {
   title: "Our Markets — Florida, Southeast & Sun Belt CRE",
   description:
-    "Rising Tide targets commercial real estate across Florida and select Southeast and Sun Belt markets with favorable demographics, job growth, and expanding economic infrastructure.",
+    "Space Coast CRE market intel plus Rising Tide's target Southeast and Sun Belt markets — aerospace job growth, sub-4% industrial vacancy, and migration-driven demand.",
   keywords: [
     "Space Coast commercial real estate",
     "Florida CRE investment",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Our Markets — Florida, Southeast & Sun Belt CRE",
     description:
-      "Rising Tide targets commercial real estate across Florida and select Sun Belt markets with favorable demographics and job growth.",
+      "Space Coast CRE market intel plus Rising Tide's target Southeast and Sun Belt markets — aerospace job growth, sub-4% industrial vacancy, and migration-driven demand.",
     url: "https://risingtidepg.com/market",
     images: [
       {

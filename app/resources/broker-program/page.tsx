@@ -5,7 +5,7 @@ import GatedForm from "@/components/GatedForm";
 export const metadata: Metadata = {
   title: "Broker Partnership Program",
   description:
-    "Co-investment and partnership opportunities for commercial real estate brokers. Learn about Rising Tide's broker network.",
+    "Join Rising Tide's broker partnership network for CRE referrals, co-investment equity, priority deal review, and transparent economics across Florida acquisitions.",
   keywords: [
     "CRE broker partnership",
     "commercial real estate broker program",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Broker Partnership Program — Rising Tide Property Group Partners",
     description:
-      "Co-investment and partnership opportunities for commercial real estate brokers on Florida's Space Coast.",
+      "Join Rising Tide's broker partnership network for CRE referrals, co-investment equity, priority deal review, and transparent economics across Florida acquisitions.",
     url: "https://risingtidepg.com/resources/broker-program",
     images: [
       {

@@ -8,7 +8,7 @@ import LatestInsights from "@/components/LatestInsights";
 export const metadata: Metadata = {
   title: "Our Approach — CRE Investment Strategy",
   description:
-    "Defensive yield with growth upside. Learn how Rising Tide Property Group Partners underwrites, acquires, and operates commercial real estate.",
+    "Explore Rising Tide's CRE playbook: defensive in-place yield, NNN lease structures, conservative underwriting, and hands-on asset management across Florida CRE.",
   keywords: [
     "CRE investment strategy",
     "commercial real estate underwriting",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Our Approach — CRE Investment Strategy",
     description:
-      "Defensive yield with growth upside. Learn how Rising Tide underwrites, acquires, and operates commercial real estate.",
+      "Explore Rising Tide's CRE playbook: defensive in-place yield, NNN lease structures, conservative underwriting, and hands-on asset management across Florida CRE.",
     url: "https://risingtidepg.com/approach",
     images: [
       {

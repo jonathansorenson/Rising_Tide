@@ -7,7 +7,7 @@ import SectionDivider from "@/components/SectionDivider";
 export const metadata: Metadata = {
   title: "About Us — Meet the Rising Tide Property Group Partners Team",
   description:
-    "Meet Nicholas White, Nicholas West, and Jonathan Sorenson — the team behind Rising Tide Property Group Partners. Over 15 years of hands-on commercial real estate experience in acquisitions, asset management, and operations across Florida.",
+    "Meet the Rising Tide team: Nicholas White, Nicholas West, and Jonathan Sorenson bring 15+ years of CRE acquisitions, asset management, and operations in Florida.",
   keywords: [
     "Rising Tide Property Group Partners",
     "Nicholas White commercial real estate",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About Us — Meet the Rising Tide Property Group Partners Team",
     description:
-      "Meet the team behind Rising Tide Property Group Partners. Over 15 years of hands-on commercial real estate experience in acquisitions, asset management, and operations across Florida.",
+      "Meet the Rising Tide team: Nicholas White, Nicholas West, and Jonathan Sorenson bring 15+ years of CRE acquisitions, asset management, and operations in Florida.",
     url: "https://risingtidepg.com/about",
     images: [
       {
