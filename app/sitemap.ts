@@ -2,6 +2,10 @@ import { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/blog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  if (process.env.COMING_SOON === "true") {
+    return [];
+  }
+
   const baseUrl = "https://risingtidepg.com";
 
   // Static pages
